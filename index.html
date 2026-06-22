@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Griffin Jax — Scouting Report vs Royals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --field:#091019; --panel:#0f1d31; --panel2:#0b1626; --inset:#0a1422;
+  --line:#1d3656; --line2:#142943;
+  --navy:#092C5C; --sky:#8FBCE6; --gold:#F5D130;
+  --ink:#e9f0f8; --mut:#7f99b6; --mut2:#5c7596;
+  --hi:#cfe3f7;
+  --good:#2f7db5; --bad:#d2492f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--field);color:var(--ink);font-family:'Archivo',system-ui,sans-serif;
+  line-height:1.5;padding-bottom:48px;
+  background-image:radial-gradient(900px 500px at 80% -10%, rgba(143,188,230,.06), transparent 60%);}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+.mono{font-family:'JetBrains Mono',monospace}
+h1,h2,h3{font-family:'Archivo Black',sans-serif;font-weight:400;letter-spacing:-.01em}
+
+/* ---------- header ---------- */
+header{background:linear-gradient(160deg,#0c213f 0%,#091019 90%);border-bottom:2px solid var(--sky);
+  padding:26px 0 22px;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;right:-60px;top:-40px;width:240px;height:240px;
+  background:radial-gradient(circle,rgba(143,188,230,.10),transparent 70%)}
+.eyebrow{font-size:11px;letter-spacing:.34em;color:var(--sky);text-transform:uppercase;font-weight:700}
+.title{font-size:clamp(34px,7vw,54px);line-height:.96;margin:8px 0 4px;
+  background:linear-gradient(90deg,#ffffff,var(--sky));-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent}
+.pmeta{font-size:13px;color:var(--mut);font-weight:600}
+.pmeta b{color:var(--hi)}
+.matchup{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:'JetBrains Mono',monospace;font-size:11.5px;border:1px solid var(--line);
+  background:var(--panel2);padding:6px 10px;border-radius:6px;color:var(--hi)}
+.chip .k{color:var(--mut)}
+.season{margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--sky)}
+.season .n{color:var(--mut)}
+
+/* ---------- tabs ---------- */
+nav{position:sticky;top:0;z-index:30;background:rgba(9,16,25,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line2)}
+.tabs{display:flex;gap:2px;max-width:980px;margin:0 auto;padding:0 12px}
+.tab{flex:1;text-align:center;padding:13px 6px;font-family:'JetBrains Mono',monospace;font-size:12px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--mut);cursor:pointer;border:none;background:none;
+  border-bottom:2px solid transparent;transition:.15s;font-weight:500}
+.tab:hover{color:var(--hi)}
+.tab.on{color:var(--sky);border-bottom-color:var(--sky)}
+
+main{padding-top:22px}
+.view{display:none;animation:fade .25s ease}
+.view.on{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+
+/* ---------- generic cards ---------- */
+.card{background:var(--panel);border:1px solid var(--line2);border-radius:12px;padding:18px 18px;margin-bottom:14px}
+.lbl{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--mut);margin-bottom:9px;display:flex;align-items:center;gap:8px}
+.lbl::before{content:"";width:14px;height:2px;background:var(--sky)}
+
+/* ---------- thesis hero ---------- */
+.thesis{background:linear-gradient(155deg,#10294b,#0b1626);border:1px solid var(--line);
+  border-left:4px solid var(--sky);border-radius:12px;padding:20px;margin-bottom:14px}
+.thesis .big{font-family:'Archivo Black';font-size:clamp(19px,3.6vw,26px);line-height:1.12;margin-bottom:8px}
+.thesis .big em{color:var(--sky);font-style:normal}
+.thesis p{color:#c5d6ea;font-size:14.5px}
+.t30{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.22em;color:var(--gold);
+  text-transform:uppercase;margin-bottom:10px}
+
+/* ---------- engine split ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:620px){.split{grid-template-columns:1fr}}
+.eng{background:var(--panel2);border:1px solid var(--line2);border-radius:10px;padding:15px}
+.eng h3{font-size:14px;margin-bottom:3px}
+.eng .who{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mut);margin-bottom:11px}
+.eng .pair{display:flex;align-items:center;gap:9px;margin:7px 0;font-size:13.5px;color:#cfdcec}
+.dot{width:10px;height:10px;border-radius:50%;flex:none}
+.eng .lead{color:var(--sky);font-weight:700}
+.vR{border-top:3px solid var(--gold)} .vL{border-top:3px solid var(--sky)}
+
+/* ---------- quick hits table ---------- */
+.qh{width:100%;border-collapse:collapse;font-size:13.5px}
+.qh th{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mut);text-align:left;padding:7px 8px;border-bottom:1px solid var(--line2);font-weight:500}
+.qh td{padding:9px 8px;border-bottom:1px solid var(--line2);vertical-align:middle}
+.qh tr:last-child td{border-bottom:none}
+.qh .slot{font-family:'JetBrains Mono';color:var(--mut);font-size:12px}
+.qh .nm{font-weight:700;cursor:pointer}
+.qh .nm:hover{color:var(--sky)}
+.qh .bb{font-family:'JetBrains Mono';font-size:10px;color:var(--mut);border:1px solid var(--line2);
+  border-radius:4px;padding:1px 5px;margin-left:6px}
+.qh .plan{color:#bccfe3;font-size:12.5px}
+.tdot{display:inline-block;width:9px;height:9px;border-radius:50%}
+.thi{background:var(--bad)} .tmed{background:var(--gold)} .tlow{background:#3f8e5a}
+
+/* ---------- witt watch ---------- */
+.watch{background:linear-gradient(150deg,#2a1c08,#15120a);border:1px solid #4a3a12;
+  border-left:4px solid var(--gold);border-radius:12px;padding:18px;margin-bottom:14px}
+.watch .flag{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.2em;color:var(--gold);
+  text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.watch h3{font-size:17px;margin-bottom:6px}
+.watch p{color:#e6d6ad;font-size:13.5px;margin-bottom:6px}
+.watch .meta{font-family:'JetBrains Mono';font-size:11px;color:#b79a52}
+
+/* ---------- arsenal table ---------- */
+.ars{width:100%;border-collapse:collapse;font-size:13px}
+.ars th{font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--mut);padding:8px 6px;border-bottom:1px solid var(--line2);font-weight:500;text-align:right}
+.ars th:first-child,.ars th:nth-child(2){text-align:left}
+.ars td{padding:10px 6px;border-bottom:1px solid var(--line2);text-align:right;font-family:'JetBrains Mono';font-size:12.5px}
+.ars td:first-child,.ars td:nth-child(2){text-align:left;font-family:'Archivo'}
+.ars tr:last-child td{border-bottom:none}
+.pname{font-weight:700;display:flex;align-items:center;gap:8px}
+.prole{font-size:10.5px;color:var(--mut);font-family:'JetBrains Mono'}
+.ubar{position:relative;height:5px;background:var(--inset);border-radius:3px;margin-top:4px;width:74px;margin-left:auto}
+.ufill{position:absolute;left:0;top:0;height:100%;border-radius:3px}
+
+/* ---------- sequencing ---------- */
+.seq{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:620px){.seq{grid-template-columns:1fr}}
+.step{background:var(--panel2);border:1px solid var(--line2);border-radius:10px;padding:14px;position:relative}
+.step .n{font-family:'Archivo Black';font-size:30px;color:var(--line);line-height:1;position:absolute;top:10px;right:12px}
+.step .t{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.1em;color:var(--sky);text-transform:uppercase;margin-bottom:7px}
+.step p{font-size:13px;color:#c5d6ea}
+.rules{background:var(--panel2);border:1px solid var(--line2);border-radius:10px;padding:16px;margin-top:12px}
+.rule{display:flex;gap:12px;margin:11px 0;align-items:flex-start}
+.rule .rn{font-family:'Archivo Black';color:var(--gold);font-size:16px;flex:none;width:20px}
+.rule b{color:var(--hi)}
+.rule p{font-size:13.5px;color:#c2d3e7}
+.clog{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.clog .c{flex:1;min-width:150px;background:var(--inset);border:1px solid var(--line2);border-radius:8px;padding:11px 13px}
+.clog .c .h{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--sky);margin-bottom:4px}
+.clog .c p{font-size:12.5px;color:#c2d3e7}
+
+/* ---------- lineup cards ---------- */
+.lgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+@media(max-width:720px){.lgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:430px){.lgrid{grid-template-columns:1fr}}
+.lc{background:var(--panel);border:1px solid var(--line2);border-radius:11px;padding:13px;cursor:pointer;
+  transition:.15s;position:relative}
+.lc:hover{border-color:var(--sky);transform:translateY(-2px)}
+.lc .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
+.lc .slot{font-family:'JetBrains Mono';font-size:11px;color:var(--mut)}
+.lc .nm{font-family:'Archivo Black';font-size:15px;line-height:1.05;margin-bottom:2px}
+.lc .sub{font-family:'JetBrains Mono';font-size:10.5px;color:var(--mut);margin-bottom:9px}
+.lc .kill{font-size:12px;color:#bccfe3}
+.lc .kill .kl{font-family:'JetBrains Mono';font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:1px}
+.lc .arrow{font-family:'JetBrains Mono';font-size:10px;color:var(--sky);margin-top:9px}
+.flagchip{position:absolute;top:11px;right:11px;font-family:'JetBrains Mono';font-size:8.5px;
+  letter-spacing:.08em;background:rgba(210,73,47,.16);color:#f0a08c;border:1px solid #6b2c1f;
+  padding:2px 6px;border-radius:4px}
+
+/* ---------- hitter detail ---------- */
+.back{font-family:'JetBrains Mono';font-size:12px;color:var(--sky);background:none;border:none;cursor:pointer;
+  padding:6px 0;margin-bottom:6px;display:inline-flex;align-items:center;gap:6px}
+.dhdr{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:4px}
+.dhdr .jersey{font-family:'Archivo Black';font-size:40px;color:var(--line);line-height:1}
+.dhdr h2{font-size:25px;line-height:1}
+.dhdr .meta{font-family:'JetBrains Mono';font-size:11.5px;color:var(--mut)}
+.dthreat{margin-left:auto;font-family:'JetBrains Mono';font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  padding:5px 10px;border-radius:6px;font-weight:700}
+.statrow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0}
+.stat{background:var(--inset);border:1px solid var(--line2);border-radius:9px;padding:11px;text-align:center}
+.stat .v{font-family:'JetBrains Mono';font-weight:700;font-size:18px;color:var(--hi)}
+.stat .k{font-family:'JetBrains Mono';font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin-top:3px}
+.dcols{display:grid;grid-template-columns:130px 1fr;gap:14px}
+@media(max-width:560px){.dcols{grid-template-columns:1fr}}
+.zone{display:flex;flex-direction:column;gap:3px}
+.zone .zc{padding:13px 8px;border-radius:7px;text-align:center;color:#06101c;font-weight:700;font-family:'JetBrains Mono';font-size:12px;position:relative}
+.zone .zc .zl{font-size:8.5px;letter-spacing:.1em;opacity:.7;display:block;font-weight:500}
+.fam{display:flex;flex-direction:column;gap:11px;justify-content:center}
+.frow .fh{display:flex;justify-content:space-between;font-family:'JetBrains Mono';font-size:11px;margin-bottom:3px}
+.frow .fh .fn{color:var(--hi)} .frow .fh .fv{color:var(--mut)}
+.fbar{height:9px;background:var(--inset);border-radius:5px;position:relative;overflow:hidden}
+.fbar .ff{position:absolute;left:0;top:0;height:100%;border-radius:5px}
+.killbox{background:linear-gradient(120deg,#0c2547,#0b1626);border:1px solid var(--line);border-radius:10px;
+  padding:13px 15px;margin:13px 0;display:flex;align-items:center;gap:13px}
+.killbox .kl{font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.killbox .kv{font-family:'Archivo Black';font-size:17px;color:var(--sky)}
+.killbox .pp{display:flex;gap:6px;margin-left:auto}
+.pp .pc{font-family:'JetBrains Mono';font-size:11px;padding:4px 9px;border-radius:6px;font-weight:700;color:#06101c}
+.aa{margin:12px 0}
+.aa .t{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:5px}
+.aa.atk .t{color:#4fae7a}.aa.avd .t{color:#e07a5f}
+.aa p{font-size:13.5px;color:#c8d8ea}
+.dnote{margin-top:12px;font-family:'JetBrains Mono';font-size:11px;letter-spacing:.06em;color:#f0c14b;
+  background:rgba(245,209,48,.07);border:1px solid #4a3a12;border-radius:7px;padding:9px 12px}
+
+footer{max-width:980px;margin:30px auto 0;padding:18px 16px 0;border-top:1px solid var(--line2);
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+footer .b{font-family:'Archivo Black';font-size:13px;color:var(--mut)}
+footer .b span{color:var(--sky)}
+footer .m{font-family:'JetBrains Mono';font-size:10px;color:var(--mut2);letter-spacing:.06em}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-family:'JetBrains Mono';font-size:10px;color:var(--mut);margin-top:10px}
+.legend .li{display:flex;align-items:center;gap:5px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">No Brand Baseball Analytics</div>
+    <h1 class="title" id="pTitle">GRIFFIN JAX</h1>
+    <div class="pmeta" id="pMeta"></div>
+    <div class="matchup" id="pMatch"></div>
+    <div class="season" id="pSeason"></div>
+  </div>
+</header>
+<nav><div class="tabs">
+  <button class="tab on" data-v="brief">Briefing</button>
+  <button class="tab" data-v="plan">Game Plan</button>
+  <button class="tab" data-v="lineup">Lineup</button>
+</div></nav>
+
+<main class="wrap">
+  <section class="view on" id="v-brief"></section>
+  <section class="view" id="v-plan"></section>
+  <section class="view" id="v-lineup"></section>
+  <section class="view" id="v-hitter"></section>
+</main>
+
+<footer>
+  <div class="b">NO BRAND <span>BASEBALL</span></div>
+  <div class="m">Player development · confidential · Jun 2026</div>
+</footer>
+
+<script>
+const DATA = {"pitcher": {"name": "GRIFFIN JAX", "num": 22, "hand": "RHP", "team": "Tampa Bay Rays", "line": "2026 \u00b7 10 GS \u00b7 49.0 IP \u00b7 3.67 ERA \u00b7 46 K \u00b7 opp .257", "note": "Reliever\u2192starter convert. Thriving in the rotation since early May."}, "game": {"opp": "Kansas City Royals", "when": "Wed Jun 24 \u00b7 6:40 ET", "site": "Tropicana Field (home)", "series": "Game 3 of 4"}, "arsenal": [{"code": "SI", "name": "Sinker", "role": "Strike-getter", "col": "#5b9bd5", "usage": 21.6, "velo": 95.5, "ivb": 11.1, "hb": -16.0, "whiff": 16, "zone": 67, "xwoba": 0.315, "useR": 31.8, "useL": 15.0}, {"code": "FF", "name": "4-Seam", "role": "Climb the ladder", "col": "#bcd8f5", "usage": 16.5, "velo": 96.1, "ivb": 17.8, "hb": -7.4, "whiff": 24, "zone": 48, "xwoba": 0.421, "useR": 13.7, "useL": 18.4}, {"code": "ST", "name": "Sweeper", "role": "Put-away vs RHH", "col": "#8FBCE6", "usage": 22.4, "velo": 88.0, "ivb": -0.2, "hb": 12.3, "whiff": 37, "zone": 45, "xwoba": 0.289, "useR": 39.3, "useL": 11.2}, {"code": "FC", "name": "Cutter", "role": "Lefty disruptor", "col": "#ef9a4d", "usage": 8.8, "velo": 92.8, "ivb": 8.8, "hb": 1.3, "whiff": 9, "zone": 55, "xwoba": 0.661, "useR": 1.4, "useL": 13.7}, {"code": "CH", "name": "Changeup", "role": "Put-away vs LHH", "col": "#F5D130", "usage": 22.0, "velo": 91.3, "ivb": 3.7, "hb": -15.7, "whiff": 41, "zone": 37, "xwoba": 0.274, "useR": 10.4, "useL": 29.6}, {"code": "CU", "name": "Curveball", "role": "3rd-time-through look", "col": "#b08bd9", "usage": 8.6, "velo": 85.0, "ivb": -14.7, "hb": 5.2, "whiff": 54, "zone": 33, "xwoba": 0.449, "useR": 3.3, "useL": 12.1}], "hitters": [{"name": "Carter Jensen", "num": 22, "bats": "L", "pos": "C", "slot": 1, "threat": "MED", "kill": "Changeup, down", "attackP": ["CH", "ST"], "attack": "Live DOWN and spin him. He sells out for damage up (.483) \u2014 a rookie who'll chase, 29% K and 30%+ whiff on everything. Bury the changeup, back-foot the sweeper.", "avoid": "Anything up. Don't let the sinker leak to the middle of the plate.", "note": "", "pa": 203, "woba": 0.327, "xcon": 0.296, "k": 29, "fam": {"Hard": {"x": 0.34, "w": 33}, "Spin": {"x": 0.251, "w": 30}, "Soft": {"x": 0.275, "w": 30}}, "zone": {"Up": 0.483, "Mid": 0.338, "Down": 0.364}, "id": 695600, "attackNames": ["Changeup", "Sweeper"], "attackCols": ["#F5D130", "#8FBCE6"]}, {"name": "Maikel Garcia", "num": 11, "bats": "R", "pos": "SS", "slot": 2, "threat": "LOW", "kill": "Sweeper, away & down", "attackP": ["ST", "CH"], "attack": "Pure contact bat (16% K). You won't blow it past him, so locate \u2014 sweeper off the plate away, changeup under the zone. Both his soft (.259) and spin (.271) are quiet.", "avoid": "A sinker over the plate. He doesn't miss hittable fastballs.", "note": "", "pa": 230, "woba": 0.283, "xcon": 0.298, "k": 16, "fam": {"Hard": {"x": 0.311, "w": 12}, "Spin": {"x": 0.271, "w": 24}, "Soft": {"x": 0.259, "w": 28}}, "zone": {"Up": 0.335, "Mid": 0.343, "Down": 0.292}, "id": 672580, "attackNames": ["Sweeper", "Changeup"], "attackCols": ["#8FBCE6", "#F5D130"]}, {"name": "Jac Caglianone", "num": 14, "bats": "L", "pos": "1B", "slot": 3, "threat": "HIGH", "kill": "Changeup \u2014 the ONLY way", "attackP": ["CH"], "attack": "The bat to circle. He crushes fastballs (.432) AND sweepers (.417), and the middle is a launch pad (.635). The changeup is the one pitch he can't square (.293, 34% whiff). Soft and down, every time \u2014 set it up with the cutter.", "avoid": "Everything hard or spun in the zone. Do NOT challenge him.", "note": "MOST DANGEROUS BAT IF WITT IS OUT", "pa": 194, "woba": 0.385, "xcon": 0.403, "k": 29, "fam": {"Hard": {"x": 0.432, "w": 25}, "Spin": {"x": 0.417, "w": 38}, "Soft": {"x": 0.293, "w": 34}}, "zone": {"Up": 0.566, "Mid": 0.635, "Down": 0.43}, "id": 695506, "attackNames": ["Changeup"], "attackCols": ["#F5D130"]}, {"name": "Salvador Perez", "num": 13, "bats": "R", "pos": "C/DH", "slot": 4, "threat": "MED", "kill": "Changeup (.065) / sweeper", "attackP": ["CH", "ST"], "attack": "Righty changeup exception in your favor \u2014 he literally cannot hit it (.065). Fade the cambio off him and spin him (.208). ", "avoid": "Hard in the zone, especially up (.384). The fastball power is still real even in a down year.", "note": "RIGHTY WHO CAN'T HIT THE CHANGEUP", "pa": 227, "woba": 0.244, "xcon": 0.273, "k": 20, "fam": {"Hard": {"x": 0.36, "w": 20}, "Spin": {"x": 0.208, "w": 32}, "Soft": {"x": 0.065, "w": 25}}, "zone": {"Up": 0.384, "Mid": 0.289, "Down": 0.306}, "id": 521692, "attackNames": ["Changeup", "Sweeper"], "attackCols": ["#F5D130", "#8FBCE6"]}, {"name": "Michael Massey", "num": 19, "bats": "L", "pos": "2B", "slot": 5, "threat": "MED", "kill": "4-Seam, UP", "attackP": ["FF", "FC"], "attack": "The lefty who breaks your changeup plan. He handles soft (.339) and spin (.321), but he's cold UP (.246). Climb the ladder with the four-seam and run the cutter in on his hands.", "avoid": "The changeup and anything soft/down (.38). Don't default to the cambio here.", "note": "LEFTY EXCEPTION \u2014 GO UP, NOT SOFT", "pa": 150, "woba": 0.325, "xcon": 0.313, "k": 15, "fam": {"Hard": {"x": 0.302, "w": 16}, "Spin": {"x": 0.321, "w": 25}, "Soft": {"x": 0.339, "w": 19}}, "zone": {"Up": 0.246, "Mid": 0.388, "Down": 0.38}, "id": 686681, "attackNames": ["4-Seam", "Cutter"], "attackCols": ["#bcd8f5", "#ef9a4d"]}, {"name": "Lane Thomas", "num": 15, "bats": "R", "pos": "RF", "slot": 6, "threat": "MED", "kill": "Changeup (.045) / sweeper", "attackP": ["CH", "ST"], "attack": "Another righty who can't touch a changeup (.045). Fade it, then spin him away (.225). Keep everything down.", "avoid": "Hard up (.397).", "note": "RIGHTY WHO CAN'T HIT THE CHANGEUP", "pa": 104, "woba": 0.314, "xcon": 0.306, "k": 22, "fam": {"Hard": {"x": 0.346, "w": 16}, "Spin": {"x": 0.225, "w": 26}, "Soft": {"x": 0.045, "w": 25}}, "zone": {"Up": 0.397, "Mid": 0.274, "Down": 0.285}, "id": 657041, "attackNames": ["Changeup", "Sweeper"], "attackCols": ["#F5D130", "#8FBCE6"]}, {"name": "Kameron Misner", "num": 26, "bats": "L", "pos": "CF", "slot": 7, "threat": "LOW", "kill": "Changeup / cutter", "attackP": ["CH", "ST"], "attack": "Small sample, limited power \u2014 pitch him like the rest of the lefties. Changeup and cutter, mix the sweeper. He hasn't shown a pitch he punishes.", "avoid": "Grooving anything middle \u2014 don't overthink a bottom-of-order bat.", "note": "SMALL SAMPLE", "pa": 17, "woba": 0.371, "xcon": 0.262, "k": 29, "fam": {"Hard": {"x": 0.269, "w": 17}, "Spin": {"x": 0.259, "w": 27}, "Soft": {"x": 0.255, "w": 25}}, "zone": {"Up": 0.137, "Mid": null, "Down": 0.459}, "id": 670224, "attackNames": ["Changeup", "Sweeper"], "attackCols": ["#F5D130", "#8FBCE6"]}, {"name": "Nick Loftin", "num": 12, "bats": "R", "pos": "3B", "slot": 8, "threat": "MED", "kill": "Sweeper + 4-Seam up", "attackP": ["ST", "FF"], "attack": "Hammers the changeup (.395) \u2014 so DON'T throw it. The sweeper is your out pitch here (.294, 32% whiff), and he's cold up (.256), so the elevated fastball plays too.", "avoid": "The changeup. Full stop.", "note": "RIGHTY WHO MASHES THE CHANGEUP \u2014 NO CAMBIO", "pa": 73, "woba": 0.357, "xcon": 0.311, "k": 14, "fam": {"Hard": {"x": 0.308, "w": 8}, "Spin": {"x": 0.294, "w": 32}, "Soft": {"x": 0.395, "w": 17}}, "zone": {"Up": 0.256, "Mid": 0.32, "Down": 0.312}, "id": 679845, "attackNames": ["Sweeper", "4-Seam"], "attackCols": ["#8FBCE6", "#bcd8f5"]}, {"name": "Isaac Collins", "num": 1, "bats": "L", "pos": "LF", "slot": 9, "threat": "MED", "kill": "Changeup, chase down", "attackP": ["CH", "ST"], "attack": "Switch-hitter, bats lefty against you \u2014 and a perfect changeup target (.179, 43% whiff). He whiffs 42%+ on spin too. Get ahead and let him chase soft.", "avoid": "Hard in the zone (.373), middle and down.", "note": "", "pa": 178, "woba": 0.327, "xcon": 0.327, "k": 24, "fam": {"Hard": {"x": 0.373, "w": 16}, "Spin": {"x": 0.281, "w": 42}, "Soft": {"x": 0.179, "w": 43}}, "zone": {"Up": 0.275, "Mid": 0.367, "Down": 0.363}, "id": 686555, "attackNames": ["Changeup", "Sweeper"], "attackCols": ["#F5D130", "#8FBCE6"]}], "witt": {"name": "Bobby Witt Jr.", "num": 7, "bats": "R", "pos": "SS", "threat": "HIGH", "kill": "No clean answer \u2014 spin, DOWN", "attackP": ["ST", "CU"], "attack": "Grade-1 MCL sprain (right knee) \u2014 day-to-day, NOT on the IL, and could be back as soon as the series opener. If he's in, he's the #2 hitter and the most dangerous out in the game. He mashes everything, especially the changeup (.463). Spin is the least-bad (.328) \u2014 sweeper and curve, down and away, live on the edges.", "avoid": "The changeup, and anything up or middle (.488 / .499).", "note": "GAME-TIME DECISION \u2014 confirm vs Mon/Tue lineup cards", "pa": 257, "woba": 0.359, "xcon": 0.374, "k": 20, "fam": {"Hard": {"x": 0.401, "w": 22}, "Spin": {"x": 0.328, "w": 33}, "Soft": {"x": 0.463, "w": 15}}, "zone": {"Up": 0.488, "Mid": 0.499, "Down": 0.35}, "id": 677951, "attackNames": ["Sweeper", "Curveball"], "attackCols": ["#8FBCE6", "#b08bd9"]}};
+
+/* ---- color scale: pitcher's POV (low xwOBA = blue/good, high = red/danger) ---- */
+function lerp(a,b,t){return Math.round(a+(b-a)*t)}
+function mix(c1,c2,t){return `rgb(${lerp(c1[0],c2[0],t)},${lerp(c1[1],c2[1],t)},${lerp(c1[2],c2[2],t)})`}
+function heat(v){
+  if(v==null) return '#22324a'; // guard
+  const cool=[40,118,180], midc=[78,93,120], hot=[210,73,47];
+  let t=(v-0.220)/(0.440-0.220); t=Math.max(0,Math.min(1,t));
+  return t<0.5 ? mix(cool,midc,t/0.5) : mix(midc,hot,(t-0.5)/0.5);
+}
+function fmt(v){return v==null?'—':v.toFixed(3).replace(/^0/,'')}
+function tcls(t){return t==='HIGH'?'thi':t==='MED'?'tmed':'tlow'}
+function tColor(t){return t==='HIGH'?'#d2492f':t==='MED'?'#F5D130':'#3f8e5a'}
+
+/* ================= HEADER ================= */
+function header(){
+  const p=DATA.pitcher,g=DATA.game;
+  document.getElementById('pTitle').textContent=p.name;
+  document.getElementById('pMeta').innerHTML=`#${p.num} · ${p.hand} · <b>${p.team}</b>`;
+  document.getElementById('pMatch').innerHTML=
+    `<div class="chip"><span class="k">VS</span> ${g.opp}</div>`+
+    `<div class="chip">${g.when}</div>`+
+    `<div class="chip">${g.site}</div>`+
+    `<div class="chip"><span class="k">${g.series}</span></div>`;
+  document.getElementById('pSeason').innerHTML=`<span class="n">FORM ·</span> ${p.line}`;
+}
+
+/* ================= BRIEFING ================= */
+function pitchDot(code){const c={Sinker:'#5b9bd5','4-Seam':'#bcd8f5',Sweeper:'#8FBCE6',Cutter:'#ef9a4d',Changeup:'#F5D130',Curveball:'#b08bd9'};return c[code]||'#888'}
+function renderBrief(){
+  const h=DATA.hitters, w=DATA.witt;
+  const lefty=h.filter(x=>x.bats==='L'||x.bats==='S').length;
+  let html=`
+  <div class="thesis">
+    <div class="t30">The 30-second version, Griff</div>
+    <div class="big">It's a <em>lefty-heavy</em> lineup — ${lefty} of their 9 bats hit from the left against you. That makes this a <em>cutter-and-changeup game</em>, exactly the plan you built this rotation spot around.</div>
+    <p>Your engine changes by who's in the box. Get ahead, then go to the kill — and don't show the same put-away twice the third time through.</p>
+  </div>
+
+  <div class="split">
+    <div class="eng vR">
+      <h3>Righties</h3>
+      <div class="who">Garcia · Perez · Thomas · Loftin</div>
+      <div class="pair"><span class="dot" style="background:#5b9bd5"></span>Sinker to get <b>ahead</b></div>
+      <div class="pair"><span class="dot" style="background:#8FBCE6"></span><span class="lead">Sweeper to put away</span></div>
+      <div class="pair" style="color:#8aa0b8;font-size:12px;margin-top:8px">Same combo that's always been money.</div>
+    </div>
+    <div class="eng vL">
+      <h3>Lefties</h3>
+      <div class="who">Jensen · Caglianone · Massey · Misner · Collins</div>
+      <div class="pair"><span class="dot" style="background:#ef9a4d"></span>Cutter to disrupt timing</div>
+      <div class="pair"><span class="dot" style="background:#F5D130"></span><span class="lead">Changeup to put away</span></div>
+      <div class="pair" style="color:#8aa0b8;font-size:12px;margin-top:8px">They tunnel off each other — same look, split late.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">Lineup at a glance — tap a name for the full card</div>
+    <table class="qh"><thead><tr><th>#</th><th>Hitter</th><th>The plan</th><th style="text-align:center">Kill</th><th style="text-align:right">Threat</th></tr></thead><tbody>`;
+  h.forEach(x=>{
+    const kp=x.attackNames.map(n=>`<span class="tdot" style="background:${pitchDot(n)};margin-left:3px" title="${n}"></span>`).join('');
+    html+=`<tr>
+      <td class="slot">${x.slot}</td>
+      <td><span class="nm" onclick="openHitter(${x.id})">${x.name}</span><span class="bb">${x.bats}</span></td>
+      <td class="plan">${x.kill}${x.note?` <span style="color:#e07a5f">· ${x.note.split('—')[0].trim().toLowerCase().includes('except')||x.note.length<34?x.note:''}</span>`:''}</td>
+      <td style="text-align:center">${kp}</td>
+      <td style="text-align:right"><span class="tdot ${tcls(x.threat)}"></span></td>
+    </tr>`;
+  });
+  html+=`</tbody></table>
+  <div class="legend">
+    <div class="li"><span class="tdot thi"></span>High threat</div>
+    <div class="li"><span class="tdot tmed"></span>Medium</div>
+    <div class="li"><span class="tdot tlow"></span>Low</div>
+    <div class="li"><span class="tdot" style="background:#F5D130"></span>Changeup</div>
+    <div class="li"><span class="tdot" style="background:#8FBCE6"></span>Sweeper</div>
+    <div class="li"><span class="tdot" style="background:#ef9a4d"></span>Cutter</div>
+    <div class="li"><span class="tdot" style="background:#bcd8f5"></span>4-Seam</div>
+  </div></div>
+
+  <div class="watch">
+    <div class="flag">▲ Watch — if active</div>
+    <h3>${w.name} <span style="font-family:'JetBrains Mono';font-size:13px;color:#b79a52;font-weight:400">#${w.num} · ${w.bats} · SS</span></h3>
+    <p>${w.attack}</p>
+    <p style="color:#d9c690"><b style="color:#f0c14b">Avoid:</b> ${w.avoid}</p>
+    <div class="meta">${w.note}</div>
+  </div>`;
+  document.getElementById('v-brief').innerHTML=html;
+}
+
+/* ================= GAME PLAN ================= */
+function renderPlan(){
+  let html=`<div class="card"><div class="lbl">The arsenal — starter era (since early May)</div>
+  <table class="ars"><thead><tr>
+    <th>Pitch</th><th>Role</th><th>Velo</th><th>IVB</th><th>HB</th><th>vs R</th><th>vs L</th><th>Whiff</th><th>xwOBA</th><th>Usage</th>
+  </tr></thead><tbody>`;
+  const maxU=Math.max(...DATA.arsenal.map(a=>a.usage));
+  DATA.arsenal.forEach(a=>{
+    html+=`<tr>
+      <td><span class="pname"><span class="dot" style="background:${a.col}"></span>${a.name}</span></td>
+      <td><span class="prole">${a.role}</span></td>
+      <td>${a.velo}</td>
+      <td>${a.ivb>0?'+':''}${a.ivb}</td>
+      <td>${a.hb>0?'+':''}${a.hb}</td>
+      <td style="color:#F5D130">${a.useR}%</td>
+      <td style="color:#8FBCE6">${a.useL}%</td>
+      <td>${a.whiff}%</td>
+      <td style="color:${heat(a.xwoba)}">${fmt(a.xwoba)}</td>
+      <td><div class="ubar"><div class="ufill" style="width:${100*a.usage/maxU}%;background:${a.col}"></div></div></td>
+    </tr>`;
+  });
+  html+=`</tbody></table>
+  <div class="legend"><div class="li">IVB/HB in inches · HB+ = arm-side run · <span style="color:#F5D130">vs R</span> / <span style="color:#8FBCE6">vs L</span> = usage by batter side · xwOBA = quality allowed</div></div>
+  </div>
+
+  <div class="card"><div class="lbl">Three times through</div>
+  <div class="seq">
+    <div class="step"><div class="n">1</div><div class="t">First time</div><p>Get ahead and show them the looks. Sinker and cutter for strikes, four-seam <b>up</b> to move their eyes. Let them see it all once.</p></div>
+    <div class="step"><div class="n">2</div><div class="t">Second time</div><p>Now go to the kill — <b style="color:#8FBCE6">sweeper</b> to righties, <b style="color:#F5D130">changeup</b> to lefties. You've shown the fastball; finish with the swing-and-miss.</p></div>
+    <div class="step"><div class="n">3</div><div class="t">Third / late</div><p>New look. Pull out the <b style="color:#b08bd9">curveball</b> as your change-of-pace so you're not showing the same put-away a third time.</p></div>
+  </div>
+
+  <div class="rules">
+    <div class="lbl" style="margin-bottom:4px">Two rules that never change</div>
+    <div class="rule"><div class="rn">1</div><p><b>The four-seam lives UP. Never middle.</b> It's the one fastball that gets hit hard when it catches the zone (.421 overall, .470 vs righties). Up is a weapon; middle is a souvenir.</p></div>
+    <div class="rule"><div class="rn">2</div><p><b>The cutter to lefties is a timing pitch, not a strikeout pitch.</b> Don't try to "get" guys with it — use it to set up the changeup. They're a pair, not separate weapons.</p></div>
+  </div>
+
+  <div style="margin-top:14px"><div class="lbl">Count logic</div>
+  <div class="clog">
+    <div class="c"><div class="h">Ahead / early</div><p>Strike-getters. Sinker to righties, cutter and 4-seam up to lefties. Steal strike one.</p></div>
+    <div class="c"><div class="h">Two strikes</div><p>Sweeper to put away righties; changeup to put away lefties. Chase out of the zone — both miss bats.</p></div>
+    <div class="c"><div class="h">Behind</div><p>Don't groove the four-seam to get back in it — that's the pitch they punish in the zone. Trust the sinker and cutter for strikes instead.</p></div>
+  </div></div>
+  </div>`;
+  document.getElementById('v-plan').innerHTML=html;
+}
+
+/* ================= LINEUP CARDS ================= */
+function renderLineup(){
+  let html=`<div class="lbl" style="padding:0 2px">Starting nine — most recent vs RHP (Jun 21). Tap for the full card.</div><div class="lgrid">`;
+  DATA.hitters.forEach(x=>{
+    const flag=x.note&&x.threat==='HIGH'?`<div class="flagchip">CIRCLE</div>`:(x.note&&x.note.toUpperCase().includes('EXCEPTION')?`<div class="flagchip" style="background:rgba(245,209,48,.14);color:#f0c14b;border-color:#4a3a12">EXCEPTION</div>`:'');
+    html+=`<div class="lc" onclick="openHitter(${x.id})">${flag}
+      <div class="top"><span class="slot">${x.slot} · #${x.num}</span><span class="tdot ${tcls(x.threat)}"></span></div>
+      <div class="nm">${x.name}</div>
+      <div class="sub">${x.bats} · ${x.pos} · ${x.pa} PA vs RHP</div>
+      <div class="kill"><span class="kl">Kill pitch</span>${x.kill}</div>
+      <div class="arrow">View card →</div>
+    </div>`;
+  });
+  html+=`</div>`;
+  document.getElementById('v-lineup').innerHTML=html;
+}
+
+/* ================= HITTER DETAIL ================= */
+function hitterDetail(x){
+  const fam=x.fam, z=x.zone;
+  const zc=(b,lab)=>{const v=z[b];return `<div class="zc" style="background:${heat(v)}"><span class="zl">${lab}</span>${fmt(v)}</div>`;};
+  const fr=(key,lab)=>{const f=fam[key];const v=f.x;const wid=v==null?0:Math.max(4,Math.min(100,100*v/0.500));
+    return `<div class="frow"><div class="fh"><span class="fn">${lab}</span><span class="fv">${fmt(v)}${f.w!=null?` · ${f.w}% whiff`:''}</span></div>
+      <div class="fbar"><div class="ff" style="width:${wid}%;background:${heat(v)}"></div></div></div>`;};
+  const pp=x.attackNames.map((n,i)=>`<span class="pc" style="background:${x.attackCols[i]}">${n}</span>`).join('');
+  return `
+  <button class="back" onclick="showView('lineup')">← Lineup</button>
+  <div class="card">
+    <div class="dhdr">
+      <span class="jersey">${x.num}</span>
+      <div><h2>${x.name}</h2><div class="meta">Bats ${x.bats} · ${x.pos} · slot ${x.slot}</div></div>
+      <span class="dthreat" style="background:${tColor(x.threat)}22;color:${tColor(x.threat)};border:1px solid ${tColor(x.threat)}55">${x.threat} threat</span>
+    </div>
+    <div class="statrow">
+      <div class="stat"><div class="v">${x.pa}</div><div class="k">PA vs RHP</div></div>
+      <div class="stat"><div class="v">${fmt(x.woba)}</div><div class="k">wOBA</div></div>
+      <div class="stat"><div class="v">${fmt(x.xcon)}</div><div class="k">xwOBAcon</div></div>
+      <div class="stat"><div class="v">${x.k==null?'—':x.k+'%'}</div><div class="k">K rate</div></div>
+    </div>
+    <div class="dcols">
+      <div>
+        <div class="aa"><div class="t" style="color:#8aa0b8">Damage by height</div></div>
+        <div class="zone">${zc('Up','UP')}${zc('Mid','MIDDLE')}${zc('Down','DOWN')}</div>
+      </div>
+      <div>
+        <div class="aa"><div class="t" style="color:#8aa0b8">Vs pitch family (xwOBAcon)</div></div>
+        <div class="fam">${fr('Hard','Hard — SI / FF / FC')}${fr('Spin','Spin — Sweeper / Curve')}${fr('Soft','Soft — Changeup')}</div>
+      </div>
+    </div>
+    <div class="killbox"><div><div class="kl">Kill pitch</div><div class="kv">${x.kill}</div></div><div class="pp">${pp}</div></div>
+    <div class="aa atk"><div class="t">▸ Attack</div><p>${x.attack}</p></div>
+    <div class="aa avd"><div class="t">▸ Avoid</div><p>${x.avoid}</p></div>
+    ${x.note?`<div class="dnote">▲ ${x.note}</div>`:''}
+  </div>`;
+}
+function openHitter(id){
+  const x=DATA.hitters.find(h=>h.id===id)||(DATA.witt.id===id?DATA.witt:null);
+  if(!x) return;
+  document.getElementById('v-hitter').innerHTML=hitterDetail(x);
+  showView('hitter');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ================= NAV ================= */
+function showView(v){
+  document.querySelectorAll('.view').forEach(s=>s.classList.remove('on'));
+  document.getElementById('v-'+v).classList.add('on');
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.v===v));
+}
+document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{showView(t.dataset.v);window.scrollTo({top:0,behavior:'smooth'});}));
+
+/* ================= INIT ================= */
+header(); renderBrief(); renderPlan(); renderLineup();
+</script>
+</body>
+</html>
