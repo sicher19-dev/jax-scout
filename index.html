@@ -1,4 +1,9 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Yankees Scout — Griffin Jax · No Brand Baseball Analytics</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mariners Scout — Griffin Jax · No Brand Baseball Analytics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
 :root{
  --bg:#06182f;--bg2:#0a2342;--card:#0d294a;--card2:#102f54;--card3:#0c264a;
  --line:#1d3656;--line2:#142943;--navy:#092C5C;--sky:#8FBCE6;--gold:#F5D130;
@@ -16,43 +21,35 @@ header{padding:28px 0 16px}
 h1{font-family:'Archivo Black';font-size:31px;line-height:1.03;margin:9px 0 6px;letter-spacing:-.5px}
 h1 em{color:var(--sky);font-style:normal}
 .tagline{font-family:'JetBrains Mono';font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}
-.sub{color:var(--mut);font-size:13.5px;font-family:'JetBrains Mono';margin-top:7px}
+.gtag{display:inline-flex;align-items:center;gap:6px;margin-top:9px;font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);background:rgba(245,209,48,.08);border:1px solid var(--bwitt);border-radius:6px;padding:4px 9px;font-weight:700}
+.sub{color:var(--mut);font-size:13.5px;font-family:'JetBrains Mono';margin-top:8px}
 .sub b{color:var(--hi);font-weight:500}
-
-/* round1 banner */
 .r1{margin-top:16px;background:linear-gradient(135deg,#0c2a4d,#0a1f3a);border:1px solid var(--line);border-radius:14px;padding:15px 16px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
 .r1 .badge{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.16em;color:#06182f;background:var(--sky);padding:4px 9px;border-radius:5px;font-weight:700}
-.r1 .ln{font-family:'Archivo Black';font-size:16px;color:#fff}
-.r1 .ln small{color:var(--good);font-size:13px}
-.r1 .mix{display:flex;align-items:center;gap:7px;margin-left:auto;flex-wrap:wrap}
-.mixbar{display:flex;height:9px;width:170px;border-radius:5px;overflow:hidden;border:1px solid var(--line2)}
-.mixbar i{height:100%}
-.r1 .mixnote{font-family:'JetBrains Mono';font-size:11px;color:var(--gold)}
-
-/* tabs */
+.r1 .ln{font-family:'Archivo Black';font-size:14px;color:#fff}
+.r1 .mixnote{font-family:'JetBrains Mono';font-size:11px;color:var(--gold);margin-left:auto}
 .tabs{position:sticky;top:0;z-index:20;display:flex;gap:6px;padding:12px 0 10px;margin-top:14px;background:linear-gradient(180deg,var(--bg) 70%,rgba(6,24,47,0));backdrop-filter:blur(4px)}
 .tab{flex:1;text-align:center;font-family:'JetBrains Mono';font-size:12px;letter-spacing:.06em;padding:10px 6px;border-radius:10px;border:1px solid var(--line);background:var(--b1);color:var(--mut);cursor:pointer;font-weight:700;transition:.15s}
 .tab.on{background:var(--sky);color:#06182f;border-color:var(--sky)}
 .pane{display:none}.pane.on{display:block;animation:f .2s}
 @keyframes f{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 .kicker{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--mut2);font-family:'JetBrains Mono';font-weight:700;margin:22px 0 12px}
-
-/* adjustment hero */
 .hero{background:linear-gradient(135deg,var(--b3),var(--card));border:1px solid var(--b4);border-radius:16px;padding:22px;position:relative;overflow:hidden}
 .hero:before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(var(--gold),var(--sky))}
 .hero h2{font-family:'Archivo Black';font-size:22px;line-height:1.12;margin-bottom:10px}
 .hero h2 .g{color:var(--gold)}
 .hero p{font-size:14.5px;color:var(--hi);line-height:1.6;margin-bottom:9px}
-.hero p:last-child{margin-bottom:0}.hero p b{color:#fff}
+.hero p:last-of-type{margin-bottom:0}.hero p b{color:#fff}.hero p .g{color:var(--gold);font-weight:700}
+.park{margin-top:14px;background:linear-gradient(135deg,#241a0e,#0e2038);border:1px solid var(--bwitt);border-radius:13px;padding:14px 16px;display:flex;gap:13px;align-items:flex-start}
+.park .ic{font-size:19px;line-height:1}
+.park .t{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:4px}
+.park p{font-size:13px;color:var(--hi);line-height:1.5}.park p b{color:#fff}
 .keys{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
 @media(max-width:640px){.keys{grid-template-columns:1fr}}
 .key{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px}
 .key .n{font-family:'Archivo Black';font-size:13px;color:var(--sky);margin-bottom:7px;display:flex;align-items:center;gap:8px}
-.key .n span{display:inline-flex;width:22px;height:22px;border-radius:6px;background:var(--sky);color:#06182f;align-items:center;justify-content:center;font-size:12px}
-.key p{font-size:13px;color:var(--hi);line-height:1.5}
-.key p b{color:#fff}
-
-/* arsenal table */
+.key .n span{display:inline-flex;width:22px;height:22px;border-radius:6px;background:var(--sky);color:#06182f;align-items:center;justify-content:center;font-size:12px;flex:none}
+.key p{font-size:13px;color:var(--hi);line-height:1.5}.key p b{color:#fff}
 .tbl{width:100%;border-collapse:collapse;font-size:13.5px}
 .tbl th{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut2);text-align:left;padding:0 8px 9px;font-weight:700}
 .tbl td{padding:10px 8px;border-top:1px solid var(--line2)}
@@ -64,8 +61,12 @@ h1 em{color:var(--sky);font-style:normal}
 .eng h4{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
 .eng.r h4{color:var(--sky)}.eng.l h4{color:var(--gold)}
 .eng p{font-size:13px;color:var(--hi);line-height:1.5}.eng p b{color:#fff}
-
-/* projection */
+.glayer{margin-top:14px;background:linear-gradient(135deg,#0c2742,#0a1f38);border:1px solid var(--line);border-radius:14px;padding:17px}
+.glayer h4{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:700}
+.glayer .v{font-size:12.5px;color:var(--hi);line-height:1.6;margin-bottom:5px;font-family:'JetBrains Mono'}
+.glayer .v .ok{color:var(--good);font-weight:700}.glayer .v .no{color:var(--bad);font-weight:700}
+.glayer .syn{margin-top:11px;padding-top:11px;border-top:1px solid var(--line2);font-size:13px;color:var(--hi);line-height:1.55;font-family:'Archivo'}
+.glayer .syn b{color:#fff}.glayer .syn .g{color:var(--gold);font-weight:700}
 .proj{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:16px;padding:20px;position:relative;overflow:hidden}
 .proj:before{content:"";position:absolute;inset:0 auto 0 0;width:4px;background:linear-gradient(var(--sky),var(--gold))}
 .statline{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
@@ -96,72 +97,42 @@ h1 em{color:var(--sky);font-style:normal}
 .bar .bp{font-size:9px;color:var(--mut2);font-family:'JetBrains Mono';margin-bottom:4px}
 .ipnote{margin-top:14px;background:var(--b2);border:1px solid var(--line2);border-radius:12px;padding:13px 15px;font-family:'JetBrains Mono';font-size:12.5px;color:var(--hi);line-height:1.55}
 .ipnote b{color:var(--gold)}
-
-/* hitter cards */
 .hgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media(max-width:640px){.hgrid{grid-template-columns:1fr}}
 .hcard{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px 15px;border-left:3px solid var(--line)}
-.hcard .top{display:flex;align-items:center;gap:8px;margin-bottom:9px}
+.hcard .top{display:flex;align-items:center;gap:8px;margin-bottom:9px;flex-wrap:wrap}
 .hcard .slot{font-family:'JetBrains Mono';font-size:11px;color:var(--mut2)}
 .hcard .nm{font-family:'Archivo Black';font-size:15px;color:#fff}
 .bb{font-family:'JetBrains Mono';font-size:9.5px;color:#06182f;background:var(--sky);border-radius:4px;padding:1px 5px;font-weight:700}
-.bb.L{background:var(--gold)}
-.tier{margin-left:auto;font-family:'JetBrains Mono';font-size:9.5px;font-weight:700;letter-spacing:.04em}
+.bb.L{background:var(--gold)}.bb.S{background:var(--lean)}
+.threat{font-family:'JetBrains Mono';font-size:9px;font-weight:700;letter-spacing:.06em;padding:1px 6px;border-radius:4px;background:rgba(255,255,255,.05)}
+.gd{font-family:'JetBrains Mono';font-size:9px;font-weight:700;padding:1px 5px;border-radius:4px;letter-spacing:.03em}
+.gd.up{background:#3a1c12;color:#f0a06a}.gd.dn{background:#10331f;color:#4fce92}
+.tier{font-family:'JetBrains Mono';font-size:9.5px;font-weight:700;letter-spacing:.04em}
 .favrow{display:flex;align-items:center;gap:9px;margin-bottom:10px}
 .favbar{flex:1;height:7px;background:var(--b2);border:1px solid var(--line2);border-radius:4px;overflow:hidden}
 .favbar i{display:block;height:100%;border-radius:4px}
 .woba{font-family:'JetBrains Mono';font-weight:700;color:#fff;font-size:13px}
 .meta2{display:flex;gap:14px;font-family:'JetBrains Mono';font-size:11.5px;color:var(--mut);margin-bottom:10px;flex-wrap:wrap}
 .meta2 b{color:var(--warn)}.meta2 span{color:var(--hi)}
-.kill{font-size:13px;color:var(--sky);font-weight:600;margin-bottom:9px}
-.kill:before{content:"OUT PITCH · ";font-family:'JetBrains Mono';font-size:9.5px;letter-spacing:.1em;color:var(--mut2);font-weight:700}
-.r1line{border-top:1px solid var(--line2);padding-top:9px;font-size:12.5px;color:var(--mut);line-height:1.45}
-.r1tag{display:inline-block;font-family:'JetBrains Mono';font-size:9px;letter-spacing:.08em;font-weight:700;padding:1px 6px;border-radius:4px;margin-right:6px;vertical-align:1px}
-.t-OWNED,.t-GROUND{background:#13402a;color:#5fd6a0}
-.t-GOTHIM{background:#3a1c12;color:#f0a06a}
-.t-FRESH{background:#3a2f0e;color:var(--gold)}
-.t-MIXED,.t-READ{background:#10243f;color:var(--sky)}
-
+.attack{font-size:13px;color:var(--hi);font-weight:600;line-height:1.5;margin-bottom:9px;padding:9px 11px;background:var(--b2);border:1px solid var(--line2);border-left:3px solid var(--sky);border-radius:8px}
+.attack:before{content:"ATTACK";display:block;font-family:'JetBrains Mono';font-size:9px;letter-spacing:.16em;color:var(--sky);font-weight:700;margin-bottom:3px}
+.swingread{font-size:12px;color:var(--mut);line-height:1.45;font-style:italic;padding-top:8px;border-top:1px dashed var(--line2)}
 .witt{margin-top:14px;background:linear-gradient(135deg,#241a0e,#10243f);border:1px solid var(--bwitt);border-radius:14px;padding:17px}
 .witt h3{font-family:'Archivo Black';font-size:17px;color:var(--gold);margin-bottom:3px}
-.witt .wd{display:flex;gap:16px;flex-wrap:wrap;margin:11px 0;font-family:'JetBrains Mono';font-size:12px;color:var(--hi)}
-.witt .wd b{color:#fff}.witt .wd span{color:var(--mut)}
 .legend{margin-top:12px;color:var(--mut2);font-size:11px;font-family:'JetBrains Mono';line-height:1.6}
 .legend b{color:var(--mut)}
 .dot{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:4px;vertical-align:middle}
-
 .speak{margin-top:24px;background:linear-gradient(135deg,#0d294a,#0a1f3b);border:1px solid #22436f;border-radius:16px;padding:20px}
 .speak .tag{display:inline-block;font-family:'JetBrains Mono';font-size:10px;letter-spacing:.2em;color:#06182f;background:var(--sky);padding:3px 9px;border-radius:5px;font-weight:700;margin-bottom:12px}
 .speak p{font-size:15px;line-height:1.62;color:var(--hi);margin-bottom:11px}.speak p:last-child{margin-bottom:0}
 .speak p b{color:#fff}.speak p .gold{color:var(--gold);font-weight:700}
-footer{margin-top:26px;padding-top:15px;border-top:1px solid var(--line2);color:var(--mut2);font-size:11px;font-family:'JetBrains Mono';line-height:1.6}
-footer b{color:var(--mut)}
-
-.gtag{display:inline-flex;align-items:center;gap:6px;margin-top:9px;font-family:'JetBrains Mono';font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);background:rgba(245,209,48,.08);border:1px solid var(--bwitt);border-radius:6px;padding:4px 9px;font-weight:700}
-.glayer{margin-top:14px;background:linear-gradient(135deg,#0c2742,#0a1f38);border:1px solid var(--line);border-radius:14px;padding:17px}
-.glayer h4{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:700}
-.glayer .v{font-size:12.5px;color:var(--hi);line-height:1.6;margin-bottom:5px;font-family:'JetBrains Mono'}
-.glayer .v .ok{color:var(--good);font-weight:700}.glayer .v .no{color:var(--bad);font-weight:700}
-.glayer .syn{margin-top:11px;padding-top:11px;border-top:1px solid var(--line2);font-size:13px;color:var(--hi);line-height:1.55;font-family:'Archivo'}
-.glayer .syn b{color:#fff}.glayer .syn .g{color:var(--gold);font-weight:700}
-.swingread{font-size:12px;color:var(--mut);line-height:1.45;font-style:italic;margin:8px 0 0;padding-top:8px;border-top:1px dashed var(--line2)}
-.gd{font-family:'JetBrains Mono';font-size:9px;font-weight:700;padding:1px 5px;border-radius:4px;margin-left:6px;letter-spacing:.03em}
-.gd.up{background:#3a1c12;color:#f0a06a}.gd.dn{background:#10331f;color:#4fce92}
-
-.scn{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
-.tog{font-family:'JetBrains Mono';font-size:11.5px;letter-spacing:.06em;padding:8px 13px;border-radius:999px;border:1px solid var(--line);background:var(--b1);color:var(--mut);cursor:pointer;font-weight:700;transition:.15s}
-.tog.on{background:var(--sky);color:#06182f;border-color:var(--sky)}
-.park{margin-top:14px;background:linear-gradient(135deg,#241a0e,#0e2038);border:1px solid var(--bwitt);border-radius:13px;padding:14px 16px;display:flex;gap:13px;align-items:flex-start}
-.park .ic{font-size:19px;line-height:1}
-.park .t{font-family:'JetBrains Mono';font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:4px}
-.park p{font-size:13px;color:var(--hi);line-height:1.5;font-family:'Archivo'}.park p b{color:#fff}
-.threat{font-family:'JetBrains Mono';font-size:9px;font-weight:700;letter-spacing:.06em;padding:1px 6px;border-radius:4px;margin-left:6px}
 </style></head><body><div class="wrap">
 <header>
  <div class="eyebrow">No Brand Baseball Analytics</div>
- <h1>Jax vs. <em>Yankees</em></h1>
- <div class="tagline">First-Look Scout &middot; Tropicana Field</div>
- <div class="gtag">&#9881; Swing-Geometry Engine &middot; bat path &times; pitch shape</div>
+ <h1>Jax vs. <em>Mariners</em></h1>
+ <div class="tagline">First-Look Scout · Tropicana Field</div>
+ <div class="gtag">⚙ Swing-Geometry Engine · bat path × pitch shape</div>
  <div class="sub" id="meta"></div>
  <div class="r1" id="formbanner"></div>
 </header>
@@ -174,34 +145,34 @@ footer b{color:var(--mut)}
 <div class="pane on" id="plan">
  <div class="kicker">The Read</div>
  <div class="hero">
-  <h2>The teeth are out. <span class="g">Back to the cutter-and-changeup game.</span></h2>
-  <p>New York is playing without <b>Aaron Judge and Giancarlo Stanton — both on the IL.</b> What's left is a depleted, <b>lefty-heavy</b> lineup with no bat that beats you by itself. This is the Kansas City plan again: <b>cutter-and-changeup to the lefties, sinker-and-sweeper to the three righties.</b></p>
-  <p>The swing data says the changeup is the whole put-away: <b>most of these lefties have steep uppercut swings that miss it</b> — Bellinger (+12.6&deg;), Chisholm (+13.7&deg;), Wells (+10.3&deg;). Get ahead, then drop the cambio under the swing.</p>
-  <p>Two bats to respect, not fear: <b>Ben Rice</b> at the top does real damage on contact (don't groove him), and switch-kid <b>Jasson Domínguez</b> has a quick, flat swing that covers your offspeed better than the rest. And <b>Spencer Jones</b> is pure boom-or-bust — fastest bat in the lineup, but a 34% strikeout rate.</p>
+  <h2>Seven lefty bats — your most extreme tilt yet. <span class="g">But this one has teeth.</span></h2>
+  <p>Seattle without Julio runs <b>seven left-side bats</b> against you (Raleigh switches over) — even more lopsided than Kansas City. The engine is the same: <b>cutter-and-changeup to the lefties, sinker-and-sweeper to Arozarena and Robles.</b> And you're coming off the night that proved it: <b>10 punchouts on the cambio-and-sweep.</b></p>
+  <p>The difference from the Yankees: <b>the middle of this order can hurt you.</b> The swing data splits them cleanly into two kinds of lefty — <span class="g">whiff bats</span> with steep uppercuts that miss under your changeup (Raleigh, Raley, Canzone, Emerson), and <span class="g">contact bats</span> with flat swings that cover it (Naylor, Crawford, Young). Bury the first group; beat the second with velocity and take the outs in the zone.</p>
+  <p>The fascinating one is <span class="g">Raleigh</span>: the steepest uppercut you'll see all year (+16.7°) — the model says <b>attack him</b>, he whiffs on exactly your shapes. But it's 60-homer pop when he connects: <b>the holes, never the middle.</b></p>
   <div class="park">
-   <div class="ic">&#127973;</div>
-   <div><div class="t">IL report &middot; the lineup's teeth</div>
-   <p><b>Judge (10-day IL) and Stanton (10-day IL) are both out.</b> That removes the two bats you'd have to pitch around — the projection assumes they don't play. If either is activated for this series it changes everything; <b>confirm the card before first pitch.</b> Tropicana is a neutral park — no porch to sweat.</p></div>
+   <div class="ic">🏥</div>
+   <div><div class="t">IL report · Julio Rodríguez</div>
+   <p><b>Julio is on the 7-day IL</b> and out of the last week of lineups — this scout assumes he sits. A 7-day stint means <b>he can be activated any day; confirm the card before first pitch.</b> If he's in, he slots top-three and adds the premium righty bat this lineup is missing — sweeper away, and we re-run the numbers.</p></div>
   </div>
   <div class="keys" id="keys"></div>
  </div>
  <div class="kicker">Arsenal &amp; Engine</div>
  <table class="tbl"><thead><tr><th>Pitch</th><th>Velo</th><th>Whiff</th><th>vs RHH</th><th>vs LHH</th></tr></thead><tbody id="arsenal"></tbody></table>
  <div class="engine">
-  <div class="eng r"><h4>▸ vs Righties (Goldschmidt · Volpe · Caballero)</h4><p><b>Sinker to get ahead → sweeper to put away,</b> down and away. All three have longer or steeper swings that can't cover the sweep — favorable outs, expand once ahead.</p></div>
-  <div class="eng l"><h4>▸ vs Lefties (the other six)</h4><p><b>Cutter to disrupt → changeup to put away,</b> tunneled off each other. The changeup down beats the steep uppercuts. Careful with Rice (real damage) and Domínguez (flat swing covers soft).</p></div>
+  <div class="eng l"><h4>▸ vs Lefties (seven of nine)</h4><p><b>Cutter to disrupt → changeup to put away</b> for the uppercut bats (Raleigh, Raley, Canzone, Emerson). But the flat-swing trio — <b>Naylor, Crawford, Young — covers the soft stuff:</b> they get velocity in, four-seams up, and contact outs. Two lefty plans, not one.</p></div>
+  <div class="eng r"><h4>▸ vs Righties (Arozarena · Robles)</h4><p><b>Sinker to get ahead → sweeper away to finish.</b> Arozarena expands with two strikes; Robles has the slowest bat in the lineup. Both favorable — pound the zone.</p></div>
  </div>
  <div class="glayer">
-  <h4>&#9881; What the swing-geometry layer says here</h4>
-  <div class="v"><span class="ok">&#10003;</span> Steep uppercuts whiff <b style="color:#fff">+40%</b> on the diving changeup (validated) — Bellinger, Chisholm, Wells all fit the profile.</div>
-  <div class="v"><span class="ok">&#10003;</span> That's the mechanical reason the <b style="color:#fff">changeup-down put-away grades favorable</b> against most of this lefty order.</div>
-  <div class="v"><span class="no">&#10007;</span> The exceptions — flatter or quicker swings that cover the offspeed: <b style="color:#fff">Ben Rice &amp; Jasson Domínguez.</b> Those are the bats to work carefully.</div>
-  <div class="syn">Net read: <b>changeup down is the whole game vs this lefty group.</b> With Judge and Stanton out, there's <span class="g">no bat that beats you alone</span> — stay around the zone and let the whiffs come.</div>
+  <h4>⚙ What the swing-geometry layer says here</h4>
+  <div class="v"><span class="ok">✓</span> Steep uppercuts whiff <b style="color:#fff">+40%</b> on the diving changeup — Raleigh (+16.7°, steepest in the sample), Raley (+13.4°), Canzone (+12.8°) all fit.</div>
+  <div class="v"><span class="ok">✓</span> Raleigh's long 7.8-ft swing misses across the sweeper too — <b style="color:#fff">both put-aways beat his path.</b> That's why he grades attackable at −29.</div>
+  <div class="v"><span class="no">✗</span> The flat swings cover soft: <b style="color:#fff">Crawford (+4.1°), Young (+5.7°), and Naylor (13% K)</b> moved tougher — they get fastballs and contact outs, not cambio hunts.</div>
+  <div class="syn">Net read: <b>two lefty plans.</b> Bury the uppercuts with the changeup; <span class="g">beat the flat swings with velocity</span> — and nothing middle-up to Raleigh, ever.</div>
  </div>
 </div>
 
 <div class="pane" id="proj">
- <div class="kicker">Projected Line &middot; 20,000 sims</div>
+ <div class="kicker">Projected Line · 20,000 sims</div>
  <div class="proj">
   <div class="statline" id="statline"></div>
   <div class="eraline"><span class="big" id="eraV"></span><span class="lab">median game ERA</span><span class="note" id="eraNote"></span></div>
@@ -216,82 +187,69 @@ footer b{color:var(--mut)}
 </div>
 
 <div class="pane" id="hit">
- <div class="kicker">Hitter-by-Hitter &middot; swing-geometry reads</div>
+ <div class="kicker">The Nine · attack plans from pitch shape × bat path</div>
  <div class="hgrid" id="hgrid"></div>
- <div class="witt" id="alvbox"></div>
+ <div class="witt" id="julbox"></div>
  <div class="legend">
   <span class="dot" style="background:var(--good)"></span><b>FAVORABLE</b> ≤.250 ·
   <span class="dot" style="background:var(--lean)"></span><b>LEAN</b> .250–.290 ·
   <span class="dot" style="background:var(--gold)"></span><b>EVEN</b> .290–.320 ·
   <span class="dot" style="background:var(--warn)"></span><b>TOUGH</b> .320–.350 ·
   <span class="dot" style="background:var(--bad)"></span><b>DANGER</b> &gt;.350<br>
-  <b>geo</b> = how much the swing-geometry layer moved the read vs pitch-type averages. Watch-flags mark bats that grade playable but carry real damage (pull power / contact).
+  <b>geo</b> = how much the swing-geometry read moved the matchup vs pitch-type averages. <b>dmg</b> = damage-on-contact vs your mix — a bat can grade favorable and still carry one-swing power (Raleigh).
  </div>
 </div>
 
 <div class="speak">
- <span class="tag">SPEAK GRIFFIN &middot; 30 SEC</span>
- <p>Good news first: the Yankees are <b>without Judge and Stanton</b> — both on the IL — so the lineup's teeth are gone. What's left is <span class="gold">lefty-heavy, which is your Kansas City game.</span> Cutter-and-changeup to the lefties, sinker-and-sweeper to the three righties. The changeup down is your out pitch — most of these lefties (Bellinger, Chisholm, Wells) have steep uppercut swings that miss it.</p>
- <p>Two guys to respect, not fear: <span class="gold">Ben Rice</span> at the top can do real damage, so don't groove him, and switch-kid <span class="gold">Jasson Domínguez</span> has a quick flat swing that covers your offspeed — mix hard, don't live soft. And watch <b>Spencer Jones</b>: rookie with the fastest bat in the lineup, but he strikes out a third of the time. Make him chase the changeup; just never hang one, because he'll hit it 450.</p>
- <p>Big-picture: you just went <b>6 for the first time on 71 pitches with zero walks</b> — you've earned a longer leash. Neutral park, no porch to sweat. Stay around the zone, let the whiffs come, and this is a favorable one. Expect about <b>5 or 6 and a run or two.</b></p>
+ <span class="tag">SPEAK GRIFFIN · 30 SEC</span>
+ <p>Seven lefties — the most extreme lineup you've drawn, and it plays right into Monday's game: <span class="gold">cutter-and-changeup, the 10-strikeout formula.</span> But there are two kinds of lefty here. The uppercut bats — <b>Raleigh, Raley, Canzone, the rookie Emerson — swing under your cambio all night.</b> The flat swings — <b>Naylor, Crawford, Young — cover it.</b> Bury the first group; beat the second with velocity in and four-seams up, and take the contact outs.</p>
+ <p><span class="gold">Raleigh is the fun one.</span> Steepest uppercut you'll face all year — the numbers say <b>attack him</b>, sweeper away and changeup down, he misses under both. But it's 60-homer power when he connects: <b>never middle, never up.</b> The mistake is the only way he beats you. And <b>Naylor won't strike out</b> — sinker down-and-away, take the groundball, don't hunt the K.</p>
+ <p>Monday's lesson travels: 10 punchouts, one hit — and the one mistake plus two walks still cost three runs. <b>Zone early, no free passes, nothing middle to the pull bats.</b> Julio's on the IL but can come back any day — check the card. Expect about <b>5 or 6 and a run or two,</b> with real strikeout upside again.</p>
 </div>
-<footer id="foot"></footer>
 </div>
 <script>
-const P={"meta": {"title": "Yankees Scout", "game": "Yankees @ Rays · Mon Jul 6 · Tropicana Field", "pitcher": "Griffin Jax · RHP", "lineup_woba": 0.267}, "form": {"last5": "5.0 / 5.0 / 5.0 / 5.0 / 6.0 IP", "note": "First 6-IP start of the year on 6/30 (71 pitches, 0 BB)"}, "proj": {"ip_med": 5.0, "ip_mean": 5.465366666666667, "ip_p25": 5.0, "ip_p75": 6.0, "ip_ge6": 43.419999999999995, "ip_ge7": 4.705, "er_med": 1.0, "er_mean": 1.81715, "er_p25": 0.0, "er_p75": 3.0, "k_med": 5.0, "k_mean": 5.49025, "k_p25": 4.0, "k_p75": 7.0, "bb_mean": 1.9547, "h_mean": 4.0202, "hr_mean": 0.7055, "era_med": 1.8, "era_mean": 3.4054073462856804, "p_qs": 70.215, "p_le1": 52.305, "p_ge6k": 48.254999999999995, "p_ge3er": 29.715000000000003, "p_blow": 9.325, "er_hist": [29.21, 23.095, 17.98, 12.165, 8.225, 4.61, 3.2399999999999998, 1.4749999999999999], "k_hist": [1.66, 4.745, 10.115, 16.04, 19.185, 18.22, 13.62, 16.415]}, "hitters": [{"slot": 1, "name": "Ben Rice", "bats": "L", "woba": 0.32, "tier": "EVEN", "col": "#F5D130", "fav": 34, "delta": -5, "kill": "Changeup down · don't groove", "mx": 0.384, "bat": 70.9, "aa": 11.0, "swl": 7.4, "fast": 25, "swing": "Real damage on contact (.384) with a steep swing — the toughest out in a depleted lineup. Changeup down, but don't groove him.", "threat": "TOP BAT", "threatcol": "#e8915a"}, {"slot": 2, "name": "Cody Bellinger", "bats": "L", "woba": 0.279, "tier": "LEAN JAX", "col": "#7fd1a3", "fav": 56, "delta": -16, "kill": "Changeup down · under the uppercut", "mx": 0.301, "bat": 68.1, "aa": 12.6, "swl": 7.7, "fast": 5, "swing": "Steep uppercut + long swing misses the diving changeup — that's the whole at-bat. Cambio down, under the swing.", "threat": "", "threatcol": ""}, {"slot": 3, "name": "Paul Goldschmidt", "bats": "R", "woba": 0.221, "tier": "FAVORABLE", "col": "#2bb673", "fav": 88, "delta": -8, "kill": "Sweeper away", "mx": 0.277, "bat": 71.1, "aa": 10.1, "swl": 7.6, "fast": 20, "swing": "Aging bat, 26% K, steep swing can't cover the sweep — sweeper away and he's a favorable out.", "threat": "", "threatcol": ""}, {"slot": 4, "name": "Jazz Chisholm Jr.", "bats": "L", "woba": 0.27, "tier": "LEAN JAX", "col": "#7fd1a3", "fav": 61, "delta": -18, "kill": "Changeup down · cutter in", "mx": 0.344, "bat": 70.5, "aa": 13.7, "swl": 7.6, "fast": 29, "swing": "Steepest lefty swing (+13.7°) — whiffs on the changeup and sweeper, but real pull pop if you elevate. Cambio down, cutter in.", "threat": "", "threatcol": ""}, {"slot": 5, "name": "Jasson Dominguez", "bats": "S", "woba": 0.287, "tier": "LEAN JAX", "col": "#7fd1a3", "fav": 52, "delta": 16, "kill": "Changeup down · mix hard", "mx": 0.334, "bat": 72.8, "aa": 6.0, "swl": 7.7, "fast": 36, "swing": "Quick, FLAT swing (+6.0°, 72.8 mph) covers your offspeed better than the rest — the switch-kid to respect. Mix hard, don't live soft.", "threat": "QUICK", "threatcol": "#F5D130"}, {"slot": 6, "name": "Anthony Volpe", "bats": "R", "woba": 0.243, "tier": "FAVORABLE", "col": "#2bb673", "fav": 76, "delta": 3, "kill": "Sweeper away", "mx": 0.273, "bat": 68.6, "aa": 9.6, "swl": 7.1, "fast": 15, "swing": "Righty with a longer swing — sweeper away eats him. 25% K, expand once ahead.", "threat": "", "threatcol": ""}, {"slot": 7, "name": "Austin Wells", "bats": "L", "woba": 0.266, "tier": "LEAN JAX", "col": "#7fd1a3", "fav": 63, "delta": -1, "kill": "Changeup chase, down", "mx": 0.314, "bat": 71.1, "aa": 10.3, "swl": 7.5, "fast": 25, "swing": "Steep lefty swing, chases the changeup down. Standard cutter-cambio put-away.", "threat": "", "threatcol": ""}, {"slot": 8, "name": "Spencer Jones", "bats": "L", "woba": 0.276, "tier": "LEAN JAX", "col": "#7fd1a3", "fav": 58, "delta": 5, "kill": "Attack zone · make him chase", "mx": 0.376, "bat": 76.3, "aa": 10.7, "swl": 7.7, "fast": 73, "swing": "FASTEST bat in the lineup (76.3!) but a 34% K rookie — boom or bust. Make him chase the changeup; just never hang one, it leaves the yard.", "threat": "BOOM/BUST", "threatcol": "#8FBCE6"}, {"slot": 9, "name": "Jose Caballero", "bats": "R", "woba": 0.241, "tier": "FAVORABLE", "col": "#2bb673", "fav": 77, "delta": 8, "kill": "Sweeper away", "mx": 0.261, "bat": 66.0, "aa": 9.9, "swl": 6.7, "fast": 11, "swing": "Slow bat (66.0), utility profile, no damage — sweeper away, pound the zone.", "threat": "", "threatcol": ""}], "jaxfam": {"FF": {"whiff": 0.2727272727272727, "xwobacon": 0.3708537999999999, "velo": 96.11999999999999, "useR": 0.1111111111111111, "useL": 0.18823529411764706, "ivb": 17.704363636363638, "hb": -7.653818181818182}, "SI": {"whiff": 0.10256410256410256, "xwobacon": 0.36774196, "velo": 95.46206896551725, "useR": 0.2962962962962963, "useL": 0.15294117647058825, "ivb": 11.221241379310346, "hb": -16.157793103448277}, "FC": {"whiff": 0.09090909090909091, "xwobacon": 0.6606812857142857, "velo": 92.7723404255319, "useR": 0.011111111111111112, "useL": 0.10352941176470588, "ivb": 8.844255319148935, "hb": 1.3046808510638297}, "ST": {"whiff": 0.3582089552238806, "xwobacon": 0.3024764444444445, "velo": 87.83999999999999, "useR": 0.4074074074074074, "useL": 0.12941176470588237, "ivb": -0.3985454545454545, "hb": 12.255272727272729}, "CH": {"whiff": 0.37755102040816324, "xwobacon": 0.26799128301886793, "velo": 91.08385093167702, "useR": 0.12222222222222222, "useL": 0.30117647058823527, "ivb": 4.044223602484473, "hb": -15.750559006211182}, "CU": {"whiff": 0.4117647058823529, "xwobacon": 0.4275, "velo": 84.95714285714286, "useR": 0.037037037037037035, "useL": 0.12470588235294118, "ivb": -14.232380952380954, "hb": 5.146666666666667}}};
+const P={"meta": {"game": "Mariners @ Rays · Sat Jul 11 · Tropicana Field", "pitcher": "Griffin Jax · RHP", "lineup_woba": 0.268}, "form": {"last5": "5.0 / 5.0 / 5.0 / 6.0 / 5.0 IP", "note": "Season-high 10 K vs NYY (7/6) — one hit allowed"}, "proj": {"ip_med": 5.0, "ip_mean": 5.45595, "ip_p25": 5.0, "ip_p75": 6.0, "ip_ge6": 43.065, "er_med": 1.0, "er_mean": 1.8581, "er_p25": 0.0, "er_p75": 3.0, "k_med": 5.0, "k_mean": 5.30285, "k_p25": 4.0, "k_p75": 7.0, "bb_mean": 1.94905, "h_mean": 4.07585, "hr_mean": 0.7171, "era_med": 1.8, "era_mean": 3.5197951127645575, "p_qs": 69.22500000000001, "p_le1": 51.214999999999996, "p_ge6k": 44.625, "p_ge3er": 30.695, "p_blow": 9.82, "er_hist": [28.24, 22.975, 18.09, 12.855, 8.02, 4.96, 3.295, 1.5650000000000002], "k_hist": [2.1350000000000002, 5.195, 11.225, 16.755, 20.064999999999998, 18.14, 12.754999999999999, 13.73]}, "hitters": [{"slot": 1, "name": "J.P. Crawford", "bats": "L", "woba": 0.3, "tier": "EVEN", "col": "#F5D130", "fav": 45, "delta": 16, "kill": "4-seam up · cutter in", "attack": "Cutter in off the hands → four-seam up → sinker for called strikes. Make him beat a fastball — no cambio hunts.", "mx": 0.318, "bat": 69.4, "aa": 4.1, "swl": 7.1, "fast": 19, "swing": "Flat +4.1° swing covers the offspeed — tougher than his numbers, a leadoff grinder. Whiffs only 15% vs your mix.", "threat": "GRINDER", "threatcol": "#8FBCE6"}, {"slot": 2, "name": "Randy Arozarena", "bats": "R", "woba": 0.257, "tier": "LEAN JAX", "col": "#7fd1a3", "fav": 69, "delta": -1, "kill": "Sweeper away, expand", "attack": "Sinker first pitch → sweeper away, away, away. He expands with two strikes — finish off the plate.", "mx": 0.298, "bat": 69.9, "aa": 8.3, "swl": 7.3, "fast": 27, "swing": "Steady righty swing but 26% K — the sweeper away pulls him off the plate every time.", "threat": "", "threatcol": ""}, {"slot": 3, "name": "Dominic Canzone", "bats": "L", "woba": 0.28, "tier": "LEAN JAX", "col": "#7fd1a3", "fav": 55, "delta": -6, "kill": "Changeup down", "attack": "Cutter in to disrupt → changeup down under the uppercut. He'll chase the cambio below the zone.", "mx": 0.35, "bat": 71.8, "aa": 12.8, "swl": 7.4, "fast": 35, "swing": "Steep +12.8° uppercut swings over the diving changeup — the standard lefty put-away applies.", "threat": "", "threatcol": ""}, {"slot": 4, "name": "Cal Raleigh", "bats": "S", "woba": 0.249, "tier": "FAVORABLE", "col": "#2bb673", "fav": 73, "delta": -29, "kill": "Changeup down · NEVER middle-up", "attack": "Attack him: sinker in for strike one → sweeper away chase → changeup buried to finish. NOTHING middle-up — a mistake is a souvenir.", "mx": 0.343, "bat": 72.9, "aa": 16.7, "swl": 7.8, "fast": 46, "swing": "STEEPEST uppercut you'll see all year (+16.7°) plus a long 7.8-ft swing — misses under the cambio AND across the sweep (38% whiff). But 60-homer pop when he connects: attack the holes, never the middle.", "threat": "K-OR-HR", "threatcol": "#F5D130"}, {"slot": 5, "name": "Josh Naylor", "bats": "L", "woba": 0.318, "tier": "EVEN", "col": "#F5D130", "fav": 34, "delta": 3, "kill": "Sinker away · take the out", "attack": "Sinker down-and-away, cutter off the plate — pitch to contact and take the groundout. Don't hunt the strikeout; he doesn't whiff.", "mx": 0.339, "bat": 69.5, "aa": 7.6, "swl": 7.5, "fast": 19, "swing": "Doesn't whiff (13% K, 19% vs your mix), doesn't chase, flat-enough swing covers everything — the toughest out here. Win with location, not stuff.", "threat": "TOP BAT", "threatcol": "#e8915a"}, {"slot": 6, "name": "Luke Raley", "bats": "L", "woba": 0.232, "tier": "FAVORABLE", "col": "#2bb673", "fav": 82, "delta": -6, "kill": "Changeup down, chase", "attack": "Get ahead with the cutter → bury back-to-back changeups. Biggest whiff hole in the order — he'll chase two in a row.", "mx": 0.322, "bat": 72.6, "aa": 13.4, "swl": 7.1, "fast": 44, "swing": "Steep +13.4° uppercut, 42% whiff vs your mix, 30% K — the changeup down under his swing is nearly automatic. But 44% fast-swing: don't hang it.", "threat": "", "threatcol": ""}, {"slot": 7, "name": "Cole Young", "bats": "L", "woba": 0.312, "tier": "EVEN", "col": "#F5D130", "fav": 38, "delta": 17, "kill": "Velo in · 4-seam up", "attack": "Velocity in, four-seam up the ladder. Short flat swing covers soft — beat him with hard stuff, not the cambio.", "mx": 0.335, "bat": 69.4, "aa": 5.7, "swl": 6.8, "fast": 21, "swing": "Short, flat +5.7° rookie swing covers soft stuff (16% whiff) — the geometry moved him 17 points TOUGHER. Hard stuff beats him; soft feeds him.", "threat": "", "threatcol": ""}, {"slot": 8, "name": "Victor Robles", "bats": "R", "woba": 0.25, "tier": "LEAN JAX", "col": "#7fd1a3", "fav": 72, "delta": 0, "kill": "Zone · sweeper away", "attack": "Pound the zone: sinker in beats the bat, sweeper away finishes. Zero reason to nibble.", "mx": 0.266, "bat": 63.4, "aa": 10.8, "swl": 6.5, "fast": 2, "swing": "Slowest bat in the lineup (63.4 mph, 2% fast) — no damage in the profile. Attack the zone relentlessly.", "threat": "", "threatcol": ""}, {"slot": 9, "name": "Colt Emerson", "bats": "L", "woba": 0.211, "tier": "FAVORABLE", "col": "#2bb673", "fav": 94, "delta": 3, "kill": "Changeup down", "attack": "Standard lefty plan, expanded early: cutter in → changeup down. Rookie — he'll chase before he adjusts.", "mx": 0.229, "bat": 70.7, "aa": 9.6, "swl": 7.2, "fast": 25, "swing": "Rookie with a 31% K rate — softest matchup in the order. Expand early and he chases.", "threat": "", "threatcol": ""}], "wilson": {"woba": 0.191, "k": 32}, "jaxfam": {"FF": {"whiff": 0.26229508196721313, "xwobacon": 0.3518767058823529, "velo": 96.1063492063492, "useR": 0.11149825783972125, "useL": 0.19222903885480572, "ivb": 17.8, "hb": -7.795238095238092}, "SI": {"whiff": 0.09302325581395349, "xwobacon": 0.35468948214285717, "velo": 95.50573248407643, "useR": 0.29965156794425085, "useL": 0.14519427402862986, "ivb": 11.244840764331212, "hb": -16.203057324840763}, "FC": {"whiff": 0.09090909090909091, "xwobacon": 0.6607108571428572, "velo": 92.7723404255319, "useR": 0.010452961672473868, "useL": 0.08997955010224949, "ivb": 8.844255319148935, "hb": 1.3046808510638297}, "ST": {"whiff": 0.39473684210526316, "xwobacon": 0.27925148717948717, "velo": 87.83703703703704, "useR": 0.40418118466898956, "useL": 0.1492842535787321, "ivb": -0.4787301587301587, "hb": 12.374603174603177}, "CH": {"whiff": 0.38317757009345793, "xwobacon": 0.27877420689655175, "velo": 91.09285714285713, "useR": 0.1254355400696864, "useL": 0.2985685071574642, "ivb": 3.944835164835165, "hb": -15.831428571428573}, "CU": {"whiff": 0.45, "xwobacon": 0.4275, "velo": 84.98028169014084, "useR": 0.03484320557491289, "useL": 0.12474437627811862, "ivb": -14.344225352112677, "hb": 5.092394366197183}}};
 const PC={CH:'var(--gold)',ST:'#8FBCE6',SI:'#5b9bd5',FF:'#bcd8f5',CU:'#b08bd9',FC:'#ef9a4d'};
 const fmtIP=v=>{const w=Math.floor(v),f=Math.round((v-w)*3);return f?w+'.'+f:''+w;};
-let scn='in';
 document.getElementById('meta').innerHTML=`<b>${P.meta.pitcher}</b> &nbsp;·&nbsp; ${P.meta.game} &nbsp;·&nbsp; opp lineup wOBA <b>${P.meta.lineup_woba}</b>`;
-// form banner
 (()=>{const f=P.form;
  document.getElementById('formbanner').innerHTML=`<span class="badge">FORM</span>
-  <span class="ln" style="font-size:14px">Last 5 starts: <span class="mono" style="color:var(--sky)">${f.last5}</span></span>
-  <span class="mix" style="margin-left:auto"><span class="mixnote" style="color:var(--gold)">&#9733; ${f.note}</span></span>`;})();
-// keys
+  <span class="ln">Last 5 starts: <span class="mono" style="color:var(--sky)">${f.last5}</span></span>
+  <span class="mixnote">★ ${f.note}</span>`;})();
 document.getElementById('keys').innerHTML=[
- ['1','Changeup down = the plan','Against a lefty-heavy order, the changeup under the swing is the put-away. Most of these uppercuts miss it.'],
- ['2','No bat to fear','With Judge & Stanton out, <b>nobody beats you alone.</b> Stay in the zone and let the whiffs come.'],
- ['3','Respect Rice & Domínguez','The two who cover your offspeed. <b>Don’t groove Rice; mix hard to Domínguez.</b> Attack Jones — he’ll chase.']
+ ['1','Two lefty plans','Uppercuts (Raleigh, Raley, Canzone) get <b>buried with the changeup.</b> Flat swings (Naylor, Crawford, Young) get <b>velocity and contact outs.</b>'],
+ ['2','Attack Raleigh — never middle','His swing misses under BOTH put-aways. The numbers say go after him; <b>the only mistake is middle-up.</b>'],
+ ['3','No free passes','Monday: 10 K, one hit — and walks still turned one mistake into three runs. <b>Zone early, every inning.</b>']
 ].map(([n,t,p])=>`<div class="key"><div class="n"><span>${n}</span>${t}</div><p>${p}</p></div>`).join('');
-// arsenal
 const ARS=[['SI','Sinker'],['ST','Sweeper'],['CH','Changeup'],['FF','4-Seam'],['FC','Cutter'],['CU','Curve']];const JF=P.jaxfam;
 document.getElementById('arsenal').innerHTML=ARS.map(([f,nm])=>{const d=JF[f];
  return `<tr><td><span class="pill" style="background:${PC[f]}"></span><b style="color:var(--hi)">${nm}</b></td><td class="use">${d.velo.toFixed(1)}</td><td class="use">${Math.round(d.whiff*100)}%</td><td class="use">${Math.round(d.useR*100)}%</td><td class="use">${Math.round(d.useL*100)}%</td></tr>`;}).join('');
-// projection (single scenario)
 function renderProj(){const d=P.proj;
  const cells=[['IP',fmtIP(d.ip_med),`${fmtIP(d.ip_p25)}–${fmtIP(d.ip_p75)} · P(6+) ${Math.round(d.ip_ge6)}%`,1],
   ['ER',d.er_med,`avg ${d.er_mean.toFixed(1)}`,0],['K',d.k_med,`avg ${d.k_mean.toFixed(1)}`,0],
   ['BB',d.bb_mean.toFixed(1),'expected',0],['H',d.h_mean.toFixed(1),`${d.hr_mean.toFixed(1)} HR`,0]];
  document.getElementById('statline').innerHTML=cells.map(([l,v,r,h])=>`<div class="st${h?' hero2':''}"><div class="v">${v}</div><div class="l">${l}</div><div class="r">${r}</div></div>`).join('');
  document.getElementById('eraV').textContent=d.era_med.toFixed(2);
- document.getElementById('eraNote').textContent=`mean ${d.era_mean.toFixed(2)} · softest lineup he's drawn — Judge & Stanton out`;
+ document.getElementById('eraNote').textContent=`mean ${d.era_mean.toFixed(2)} · Julio out (7-day IL) · confirm card`;
  const chips=[[`${Math.round(d.p_qs)}%`,'g','<b>5+ IP & ≤2 ER</b>'],[`${Math.round(d.p_le1)}%`,'s','<b>≤1 earned</b>'],[`${Math.round(d.p_ge6k)}%`,'y','<b>6+ K</b>'],[`${Math.round(d.p_ge3er)}%`,'w','<b>3+ earned</b>'],[`${Math.round(d.p_blow)}%`,'b','<b>blow-up</b> (5+ ER)']];
  document.getElementById('chips').innerHTML=chips.map(([v,c,l])=>`<div class="chip"><div class="pv ${c}">${v}</div><div class="pl">${l}</div></div>`).join('');
  const draw=(id,h,labs)=>{const mx=Math.max(...h),pk=h.indexOf(mx);document.getElementById(id).innerHTML=h.map((p,i)=>`<div class="bar${i===pk?' peak':''}"><div class="bp">${p<4?'':Math.round(p)+'%'}</div><div class="col" style="height:${Math.max(2,p/mx*100)}%"></div><div class="bl">${labs[i]}</div></div>`).join('');};
  draw('erBars',d.er_hist,['0','1','2','3','4','5','6','7+']);draw('kBars',d.k_hist,['≤1','2','3','4','5','6','7','8+']);
- document.getElementById('ipnote').innerHTML=`<b>On innings:</b> he just went 6 for the first time all year (6/30, 71 pitches, 0 BB) — the leash has stretched. Model has him <b>5–6</b>, roughly a coin flip on the 6th (${Math.round(d.ip_ge6)}%). Still the widest variable — and the projection assumes Judge & Stanton stay on the IL; re-confirm the card when it posts.`;}
-// hitters
+ document.getElementById('ipnote').innerHTML=`<b>On innings:</b> the leash keeps stretching — a 6-inning start (6/30) and 81 pitches with double-digit whiffs (7/6). Model has him <b>5–6</b>, about ${Math.round(d.ip_ge6)}% for the 6th. Still the widest variable; this assumes Julio sits — re-confirm the card when it posts.`;}
 document.getElementById('hgrid').innerHTML=P.hitters.map(h=>{const dmgHot=h.mx>=0.33;
  const gd=h.delta>=8?`<span class="gd up">geo +${h.delta}</span>`:(h.delta<=-8?`<span class="gd dn">geo ${h.delta}</span>`:'');
- const th=h.threat?`<span class="threat" style="color:${h.threatcol};background:rgba(255,255,255,.05)">${h.threat}</span>`:'';
+ const th=h.threat?`<span class="threat" style="color:${h.threatcol}">${h.threat}</span>`:'';
  return `<div class="hcard" style="border-left-color:${h.col}">
   <div class="top"><span class="slot">${h.slot}</span><span class="nm">${h.name}</span><span class="bb ${h.bats}">${h.bats}</span>${th}${gd}<span class="tier" style="color:${h.col};margin-left:auto">${h.tier}</span></div>
   <div class="favrow"><span class="woba">${h.woba.toFixed(3)}</span><div class="favbar"><i style="width:${h.fav}%;background:${h.col}"></i></div></div>
   <div class="meta2"><span>dmg ${dmgHot?'<b>'+h.mx.toFixed(3)+'</b>':h.mx.toFixed(3)}</span><span>${h.bat} mph</span><span>${h.aa>0?'+':''}${h.aa}° AA</span><span>${h.swl}ft swing</span></div>
-  <div class="kill">${h.kill}</div>
+  <div class="attack">${h.attack}</div>
   <div class="swingread">${h.swing}</div>
  </div>`;}).join('');
-// IL / watch box
 (()=>{
- document.getElementById('alvbox').innerHTML=`<h3>The teeth are out — Judge &amp; Stanton on the IL</h3>
-  <div class="mono" style="color:var(--mut);font-size:12px">Both on the 10-day IL and absent from the last week of lineups. The projection assumes neither plays — confirm the card, since an activation flips the whole read.</div>
-  <div class="mono" style="font-size:12.5px;color:var(--hi);line-height:1.6;margin-top:12px">With the two big bats gone, <b>no Yankee beats you by himself.</b> The three to work carefully:<br>
-  • <b style="color:var(--warn)">Ben Rice (L)</b> — top-of-order damage on contact (.384); changeup down, don't groove.<br>
-  • <b style="color:var(--gold)">Jasson Domínguez (S)</b> — quick, flat swing covers the offspeed; mix hard, don't live soft.<br>
-  • <b style="color:var(--sky)">Spencer Jones (L)</b> — fastest bat in the lineup (76.3) but 34% K. Make him chase; never hang one.<br>
-  Everyone else is a favorable out on the cutter-and-changeup.</div>`;})();
-document.getElementById('foot').innerHTML=`<b>Model inputs:</b> Yankees hitters’ 2024–present batted-ball results by pitch type vs RHP (xwOBA-on-contact, whiff%) · a <b>swing-geometry layer</b> (sweeper sweep × swing length, offspeed drop × attack angle, bat-speed damage — validated, and tightened so it doesn’t double-count measured contact) · Griffin’s measured arsenal through 6/30 · times-through-order penalty · Tropicana Field (neutral park) · workload leash updated for his first 6-IP start · lineup per the last week of games with Judge &amp; Stanton on the IL. 20,000-game Monte Carlo. Projection, not a guarantee.`;
+ document.getElementById('julbox').innerHTML=`<h3>Julio Rodríguez — 7-day IL, could return any day</h3>
+  <div class="mono" style="color:var(--mut);font-size:12px">Out of the last week of lineups; this scout and projection assume he sits.</div>
+  <div class="mono" style="font-size:12.5px;color:var(--hi);line-height:1.6;margin-top:11px">If activated, he slots top-three and adds the premium righty bat Seattle is missing — the plan is <b style="color:var(--gold)">sweeper away</b>, same as the other righties, but the projection tightens. Also watch the DH spot: if righty <b>Weston Wilson</b> starts over Canzone, that's a softer matchup (32% K — sweeper eats him). <b style="color:var(--gold)">Confirm the card before first pitch.</b></div>`;})();
 function tab(id){document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.p===id));document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on',p.id===id));window.scrollTo(0,0);}
 renderProj();
 </script></body></html>
