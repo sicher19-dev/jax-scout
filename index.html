@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Red Sox Scout — Griffin Jax · No Brand Baseball Analytics</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blue Jays Scout — Griffin Jax · No Brand Baseball Analytics</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"><style>
 :root{
  --bg:#06182f;--bg2:#0a2342;--card:#0d294a;--card2:#102f54;--card3:#0c264a;
  --line:#1d3656;--line2:#142943;--navy:#092C5C;--sky:#8FBCE6;--gold:#F5D130;
@@ -122,115 +122,125 @@ h1 em{color:var(--sky);font-style:normal}
 .speak .tag{display:inline-block;font-family:'JetBrains Mono';font-size:10px;letter-spacing:.2em;color:#06182f;background:var(--sky);padding:3px 9px;border-radius:5px;font-weight:700;margin-bottom:12px}
 .speak p{font-size:15px;line-height:1.62;color:var(--hi);margin-bottom:11px}.speak p:last-child{margin-bottom:0}
 .speak p b{color:#fff}.speak p .gold{color:var(--gold);font-weight:700}
+
+.seqgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.seqgrid{grid-template-columns:1fr}}
+.tun{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:15px;border-top:3px solid var(--sky)}
+.tun .tn{font-family:'Archivo Black';font-size:15px;color:#fff}
+.tun .tt{font-family:'JetBrains Mono';font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--sky);margin:2px 0 8px;font-weight:700}
+.tun p{font-size:12.5px;color:var(--hi);line-height:1.55}
+.cf td:first-child{font-family:'JetBrains Mono';font-size:11px;color:var(--mut);white-space:nowrap}
+.cf .rx{font-family:'JetBrains Mono';font-size:12px;color:var(--hi)}
+.cf .rx b{color:var(--gold)}
+.pa td{font-size:13px;color:var(--hi)}
+.pa td:first-child{font-weight:700;color:#fff}
+.pa .pr{font-family:'JetBrains Mono';font-size:12px;color:var(--sky);white-space:nowrap}
+.pa .pn{font-size:12px;color:var(--mut)}
 </style></head><body><div class="wrap">
 <header>
  <div class="eyebrow">No Brand Baseball Analytics</div>
- <h1>Jax vs. <em>Red Sox</em></h1>
- <div class="tagline">2H Opener · Fenway Park</div>
+ <h1>Jax vs. <em>Blue Jays</em></h1>
+ <div class="tagline">Sequence Plan · Rogers Centre</div>
  <div class="gtag">⚙ Swing-Geometry Engine · bat path × pitch shape</div>
  <div class="sub" id="meta"></div>
- <div class="r1" id="formbanner"></div>
+ <div class="r1" id="lessonbanner"></div>
 </header>
 <div class="tabs">
  <div class="tab on" data-p="plan" onclick="tab('plan')">Game Plan</div>
- <div class="tab" data-p="proj" onclick="tab('proj')">Projection</div>
+ <div class="tab" data-p="seq" onclick="tab('seq')">Sequences</div>
  <div class="tab" data-p="hit" onclick="tab('hit')">Hitters</div>
 </div>
 
 <div class="pane on" id="plan">
  <div class="kicker">The Read</div>
  <div class="hero">
-  <h2>Your first balanced lineup. <span class="g">Both engines, every at-bat.</span></h2>
-  <p>Boston is gutted — <b>Roman Anthony, Trevor Story, and Triston Casas are all on the 60-day IL</b> — and what's left is the first genuinely mixed nine you've faced: <b>five righties, four lefty bats, alternating all the way down.</b> So both plans run at once: <b>sinker-and-sweeper to the righties, cutter-and-changeup to the lefties,</b> flipping batter to batter.</p>
-  <p>The danger profile is different too. This is a <b>contact team, not a whiff team</b> — Durbin and Yoshida strike out 13%, and the core bats swing <b>flat</b>: Duran (+4.4°, flattest you've seen), Gonzalez (+5.8°), Yoshida. Flat paths cover your offspeed — <span class="g">the ladder and velocity beat them, not the cambio.</span></p>
-  <p>And the park is the other opponent: <span class="g">Fenway pays contact.</span> The Monster turns liners into doubles, the triangle pays speed in triples — and <b>Duran is exactly the bat built to cash both.</b> Circle him. Abreu carries the one-swing power. Everyone else is an out if you stay off the middle.</p>
+  <h2>The 3-4 trap is the whole game. <span class="g">Vladdy has no hole. Okamoto is all hole.</span></h2>
+  <p><b>Guerrero is the flattest (+1.6°), fastest (74.9 mph) swing we've ever modeled, and he whiffs 14%.</b> There is no geometric answer — the plan is pattern-breaking, edges, and the discipline to take the walk. Because right behind him, <b>Okamoto is the biggest whiff target we've ever graded:</b> the steepest uppercut (+14.7°) and longest swing (7.9 ft) in the lineup — both put-aways beat his path (42% whiff). <span class="g">Walking Vladdy to strike out Okamoto is winning baseball.</span></p>
+  <p>Around the trap it's a balanced nine — both engines, batter by batter: <b>sinker-sweeper to five righties, cutter-changeup to four lefty bats.</b> The contact corps (Clement 9% K, Lukes, Kirk 11% K, Clase) gets efficiency chains and outs in play; the whiff bats (Okamoto, Varsho, Valenzuela, Urías) get buried.</p>
+  <p>And the arsenal note that shapes everything this week: <b>the changeup is peaking — 50% whiffs over the last three starts</b> — while <b>the four-seam is getting timed</b> (24→16%). The cambio is the finisher; the heater is a look.</p>
   <div class="park">
    <div class="ic">🏟</div>
-   <div><div class="t">Fenway Park · the Monster tax</div>
-   <p><b>The doubles park.</b> The Monster (310 ft, 37 ft tall) turns routine fly balls and pulled liners from righty bats into wall-ball doubles — <b>nothing up-and-in to Rafaela or Gonzalez.</b> The triangle (420) pays Duran's speed in triples. Lefty homers die in the deep right-center — so the real tax here is gap contact, not the long ball. <b>Live at the knees; ground balls are your friend tonight.</b></p></div>
+   <div><div class="t">Rogers Centre · short corners</div>
+   <p><b>The pull-power park.</b> The corners play short (328/328) and the ball carries — mistakes middle-in to <b>Vladdy and Kirk leave the yard.</b> But the alleys are honest: the low-away quadrant and the sweeper off the plate live safely. <b>The miss is always down and away here.</b></p></div>
   </div>
   <div class="keys" id="keys"></div>
  </div>
- <div class="kicker">Arsenal &amp; Engine</div>
- <table class="tbl"><thead><tr><th>Pitch</th><th>Velo</th><th>Whiff</th><th>vs RHH</th><th>vs LHH</th></tr></thead><tbody id="arsenal"></tbody></table>
+ <div class="kicker">Current Stuff &amp; Shapes</div>
+ <table class="tbl"><thead><tr><th>Pitch</th><th>Velo</th><th>IVB</th><th>HB</th><th>Whiff</th></tr></thead><tbody id="arsenal"></tbody></table>
  <div class="engine">
-  <div class="eng r"><h4>▸ vs Righties (five of nine)</h4><p><b>Sinker to get ahead → sweeper away to finish</b> for the chase bats (Rafaela, Monasterio, Narváez). But <b>Durbin won't whiff</b> — zone him and take the out — and <b>Gonzalez covers soft:</b> he gets the four-seam ladder instead.</p></div>
-  <div class="eng l"><h4>▸ vs Lefties (four of nine)</h4><p><b>Cutter in → changeup down</b> finishes Abreu and Seigler. But <b>Yoshida and Duran cover the soft stuff</b> with flat contact swings — they get velocity in and four-seams up, and you take the ball in play on your terms.</p></div>
+  <div class="eng r"><h4>▸ vs Righties (five of nine)</h4><p><b>Sinker ahead → sweeper away</b> buries Okamoto and Urías. But <b>Clement and Kirk won't whiff</b> — they get two-pitch contact chains in the low-away quadrant. And <b>Vladdy gets nothing in a pattern</b> — see the trap rules.</p></div>
+  <div class="eng l"><h4>▸ vs Lefties (four of nine)</h4><p><b>Cutter in → changeup buried</b> finishes Varsho and Valenzuela. But <b>Lukes covers soft</b> with a flat contact swing — he gets the velocity chain, four-seam up and cutter in. Clase gets zone heaters; don't waste soft on a 65-mph bat.</p></div>
  </div>
  <div class="glayer">
   <h4>⚙ What the swing-geometry layer says here</h4>
-  <div class="v"><span class="ok">✓</span> The uppercut chase bats still whiff on the sweep-and-dive — <b style="color:#fff">Rafaela (+10.7°), Narváez (30%), Wong off the bench</b> — the standard put-aways hold there.</div>
-  <div class="v"><span class="no">✗</span> But this lineup's core is <b style="color:#fff">FLAT swings: Duran (+4.4°, geo +19), Gonzalez (+5.8°, geo +20), Yoshida</b> — they cover the offspeed. The ladder and velocity beat flat paths; the cambio doesn't.</div>
-  <div class="v"><span class="ok">✓</span> Bat speed carries the damage: <b style="color:#fff">Abreu and Duran (72.5 mph each)</b> are the only two who punish mistakes — everyone else sits under 68.</div>
-  <div class="syn">Net read: <b>fewer whiffs than Seattle — more balls in play, in a park that pays contact.</b> <span class="g">Knees, ground balls, ladder to the flat swings,</span> and nothing middle to the two fast bats.</div>
+  <div class="v"><span class="ok">✓</span> Okamoto's long-and-steep swing fires <b style="color:#fff">both validated whiff terms at once</b> — the biggest geometry move we've produced (−31). Hunt him.</div>
+  <div class="v"><span class="ok">✓</span> Varsho (+10.8°) and Urías (+11.7°) whiff under the dive and across the sweep — standard put-aways hold.</div>
+  <div class="v"><span class="no">✗</span> The flat swings — <b style="color:#fff">Vladdy (+1.6°), Lukes (+5.9°), Clase (+3.9°)</b> — cover everything soft. Velocity chains for Lukes and Clase; for Vladdy, no chain works twice. Pattern-break.</div>
+  <div class="syn">Net read: <b>a whiff column and a contact column.</b> <span class="g">Bury the steep swings, zone the flat ones</span> — and win the Vladdy at-bat before it starts, in the sequence.</div>
  </div>
 </div>
 
-<div class="pane" id="proj">
- <div class="kicker">Projected Line · 20,000 sims</div>
- <div class="proj">
-  <div class="statline" id="statline"></div>
-  <div class="eraline"><span class="big" id="eraV"></span><span class="lab">median game ERA</span><span class="note" id="eraNote"></span></div>
+<div class="pane" id="seq">
+ <div class="kicker">Tunnel Pairs · measured from his shapes</div>
+ <div class="seqgrid" id="tunnels"></div>
+ <div class="kicker">Count Flow · his real mix, and the fix</div>
+ <table class="tbl cf"><thead><tr><th>Count</th><th>vs Righties</th><th>vs Lefties</th></tr></thead><tbody id="cflow"></tbody></table>
+ <div class="kicker">Putaway Board · 2-strike whiff per swing</div>
+ <table class="tbl pa"><tbody id="paboard"></tbody></table>
+ <div class="glayer" style="margin-top:22px">
+  <h4>⚙ The discipline list · never break these</h4>
+  <div id="rules"></div>
  </div>
- <div class="chips" id="chips"></div>
- <div class="kicker">Outcome Distribution</div>
- <div class="dist">
-  <div class="hc"><h4>Earned Runs</h4><div class="bars" id="erBars"></div></div>
-  <div class="hc"><h4>Strikeouts</h4><div class="bars" id="kBars"></div></div>
- </div>
- <div class="ipnote" id="ipnote"></div>
 </div>
 
 <div class="pane" id="hit">
- <div class="kicker">The Nine · attack plans from pitch shape × bat path</div>
+ <div class="kicker">The Nine · sequences from pitch shape × bat path</div>
  <div class="hgrid" id="hgrid"></div>
- <div class="witt" id="ilbox"></div>
+ <div class="witt" id="rotbox"></div>
  <div class="legend">
   <span class="dot" style="background:var(--good)"></span><b>FAVORABLE</b> ≤.250 ·
   <span class="dot" style="background:var(--lean)"></span><b>LEAN</b> .250–.290 ·
   <span class="dot" style="background:var(--gold)"></span><b>EVEN</b> .290–.320 ·
   <span class="dot" style="background:var(--warn)"></span><b>TOUGH</b> .320–.350 ·
   <span class="dot" style="background:var(--bad)"></span><b>DANGER</b> &gt;.350<br>
-  <b>geo</b> = how much the swing-geometry read moved the matchup vs pitch-type averages. <b>dmg</b> = damage-on-contact vs your mix — in this park, gap contact is the tax even when the matchup grades even.
+  <b>geo</b> = how much the swing-geometry read moved the matchup vs pitch-type averages. The ATTACK box on each card is the count-chain: first look → ahead → finish.
  </div>
 </div>
 
 <div class="speak">
  <span class="tag">SPEAK GRIFFIN · 30 SEC</span>
- <p>First one out of the break, and the first <b>balanced lineup</b> you've drawn — five righties, four lefties, alternating. So it's both games at once: <span class="gold">sinker-sweeper to the righties, cutter-changeup to the lefties,</span> flipping every at-bat. Boston's gutted — Anthony, Story, Casas all on the 60-day — nobody here is Judge.</p>
- <p>The danger is the park and one bat: <span class="gold">Duran.</span> Flattest, fastest swing in the order, and Fenway pays his contact — Monster doubles, triangle triples. <b>Four-seam up above his path, keep it out of the gaps.</b> Abreu's the power — attack him with the cambio down, but nothing middle. And <b>Durbin and Yoshida won't strike out</b> — don't waste bullets hunting Ks; take the outs in play.</p>
- <p>This is a contact team in a doubles park, so the shape of the night changes: <b>fewer punchouts than Seattle, more balls in play.</b> Live at the knees, get ground balls, and keep the standing rule: <span class="gold">no free passes</span> — walks ahead of wall-balls is how a clean night turns into three runs. It's a doubleheader Friday, so confirm which nine you're getting. Expect about <b>5 or 6 and a run or two.</b></p>
+ <p>Friday stung, so let's be honest about it: <b>it wasn't the stuff — it was the order of operations.</b> The flat swings got soft stuff and hit it 104. The no-whiff bat got a sinker up and it left. This week is sequence discipline, and the good news is <span class="gold">your cambio is the best it's been all year — 50% whiffs over the last three.</span></p>
+ <p>The game is the <span class="gold">3-4 trap.</span> Vladdy is the flattest, fastest swing you'll see — no hole, and he's scouted your habits: you open righties sinker-or-sweeper 86% of the time, and when you fall behind you throw the sinker half the time. <b>So break the pattern: start him with the cutter or curve, live on the edges, and never fall behind.</b> Base open, two outs? <b>Walk him on purpose.</b> Because Okamoto behind him is all hole — sweeper away twice in a row, his long swing can't adjust to the repeat. Hunt that K every single time.</p>
+ <p>Everything else is roles: <b>Kirk gets the low-away quadrant or nothing</b> — never middle-in at Rogers, the corners are short. Varsho and Valenzuela get buried changeups. The contact guys — Clement, Lukes, Clase — get velocity in the zone and two-pitch outs; don't spend bullets there. <b>Four-seam is a look now, not a finisher. The sweep-and-dive carries you.</b></p>
 </div>
 </div>
 <script>
-const P={"meta": {"game": "Rays @ Red Sox · Fri Jul 17 · Fenway Park", "pitcher": "Griffin Jax · RHP", "lineup_woba": 0.268}, "form": {"last5": "5.0 / 5.0 / 6.0 / 5.0 / 5.0 IP", "note": "2H opener — 10-K gem and a 1-ER start heading into the break"}, "proj": {"ip_med": 5.0, "ip_mean": 5.470633333333334, "ip_p25": 5.0, "ip_p75": 6.0, "ip_ge6": 44.315, "er_med": 1.0, "er_mean": 1.83255, "er_p25": 0.0, "er_p75": 3.0, "k_med": 5.0, "k_mean": 4.84715, "k_p25": 3.0, "k_p75": 6.0, "bb_mean": 1.7003, "h_mean": 4.21195, "hr_mean": 0.6504, "era_med": 1.8, "era_mean": 3.4761573084790593, "p_qs": 69.765, "p_le1": 52.154999999999994, "p_ge6k": 35.31, "p_ge3er": 30.185000000000002, "p_blow": 9.765, "er_hist": [29.315, 22.84, 17.66, 12.385, 8.035, 4.795, 3.42, 1.55], "k_hist": [3.2300000000000004, 7.865, 14.085, 19.45, 20.06, 15.9, 10.100000000000001, 9.31]}, "hitters": [{"slot": 1, "name": "Anthony Seigler", "bats": "S", "woba": 0.268, "tier": "LEAN JAX", "col": "#7fd1a3", "fav": 62, "delta": -7, "kill": "Zone · cutter-cambio", "attack": "Pound the zone: cutter in, changeup away. Slowest bat in the nine — he cannot punish you. Zero walks to the leadoff man.", "mx": 0.282, "bat": 64.5, "aa": 9.4, "swl": 6.5, "fast": 0, "swing": "Switch-hitter with the slowest starting bat here (64.5 mph, 0% fast) — no damage in the profile. The only mistake is a walk.", "threat": "", "threatcol": ""}, {"slot": 2, "name": "Ceddanne Rafaela", "bats": "R", "woba": 0.246, "tier": "FAVORABLE", "col": "#2bb673", "fav": 74, "delta": -12, "kill": "Sweeper away", "attack": "Sinker in for strike one → sweeper away, away, away. The uppercut misses the sweep and he chases early. The Monster only matters if you hang it.", "mx": 0.267, "bat": 67.9, "aa": 10.7, "swl": 7.3, "fast": 8, "swing": "+10.7° uppercut with real chase — the sweeper away is nearly automatic. Hangers are the only risk in this park.", "threat": "", "threatcol": ""}, {"slot": 3, "name": "Wilyer Abreu", "bats": "L", "woba": 0.294, "tier": "EVEN", "col": "#F5D130", "fav": 48, "delta": 6, "kill": "Changeup down · nothing middle", "attack": "Cutter in off the hands → changeup down to finish. He whiffs enough to attack — but it's the biggest damage in the lineup: nothing middle, ever.", "mx": 0.355, "bat": 72.5, "aa": 8.7, "swl": 7.1, "fast": 38, "swing": "38% fast-swing, .355 damage — the biggest single-swing threat in the order. But 25% whiff vs your mix says attack; the cambio down finishes it.", "threat": "DAMAGE", "threatcol": "#e8915a"}, {"slot": 4, "name": "Caleb Durbin", "bats": "R", "woba": 0.278, "tier": "LEAN JAX", "col": "#7fd1a3", "fav": 57, "delta": 0, "kill": "Zone · take the out", "attack": "Sinker and sweeper IN the zone — take the out in play. He won't whiff (16%) and won't hurt you (.272): don't waste pitches hunting a K that isn't there.", "mx": 0.272, "bat": 65.3, "aa": 7.2, "swl": 6.7, "fast": 3, "swing": "13% K, 16% whiff, 65-mph bat — a pest, not a threat. This at-bat is about pitch efficiency, not a put-away.", "threat": "", "threatcol": ""}, {"slot": 5, "name": "Masataka Yoshida", "bats": "L", "woba": 0.306, "tier": "EVEN", "col": "#F5D130", "fav": 41, "delta": 5, "kill": "Velo in · contact out", "attack": "Velocity in, four-seam up — let him put a fastball in play. Pure contact bat that covers the cambio; location wins this at-bat, not stuff.", "mx": 0.32, "bat": 69.8, "aa": 7.0, "swl": 7.2, "fast": 15, "swing": "Pure contact (13% K), flat-enough path covers the dive — the Naylor of this series. He'll put it in play; make it a fastball on your terms.", "threat": "NO-WHIFF", "threatcol": "#8FBCE6"}, {"slot": 6, "name": "Andruw Monasterio", "bats": "R", "woba": 0.245, "tier": "FAVORABLE", "col": "#2bb673", "fav": 75, "delta": 2, "kill": "Sweeper away, expand", "attack": "Sinker ahead → sweeper away chase. Standard righty put-away — expand once you're ahead.", "mx": 0.263, "bat": 66.8, "aa": 9.1, "swl": 6.7, "fast": 3, "swing": "25% K righty with a modest swing — the sweeper away pulls him off the plate every time.", "threat": "", "threatcol": ""}, {"slot": 7, "name": "Jarren Duran", "bats": "L", "woba": 0.299, "tier": "EVEN", "col": "#F5D130", "fav": 45, "delta": 19, "kill": "4-seam UP · off the gaps", "attack": "Four-seam UP above the flat path, cutter in on the hands. Keep it out of the gaps — the Monster and the triangle pay his contact. Never down-middle.", "mx": 0.346, "bat": 72.5, "aa": 4.4, "swl": 7.4, "fast": 40, "swing": "FLATTEST swing in the order (+4.4°) at 72.5 mph, 40% fast — covers everything soft, and geometry moved him +19 tougher. Fenway pays his gap contact in doubles and triples. The ladder is the answer.", "threat": "CIRCLE · FENWAY", "threatcol": "#e0553f"}, {"slot": 8, "name": "Carlos Narvaez", "bats": "R", "woba": 0.228, "tier": "FAVORABLE", "col": "#2bb673", "fav": 84, "delta": -13, "kill": "Sweeper · attack", "attack": "Attack: sinker in, sweeper away — he punches out 29% of the time. The softest righty matchup in the order.", "mx": 0.26, "bat": 70.1, "aa": 8.6, "swl": 7.5, "fast": 19, "swing": "29% K, 30% whiff vs your mix — the attackable righty. Sinker-sweeper eats him.", "threat": "", "threatcol": ""}, {"slot": 9, "name": "Romy Gonzalez", "bats": "R", "woba": 0.249, "tier": "FAVORABLE", "col": "#2bb673", "fav": 73, "delta": 20, "kill": "4-seam up · velo in", "attack": "Four-seam up the ladder, sinker in. Quick flat swing covers the soft stuff — beat him with velocity, not sweepers middle.", "mx": 0.285, "bat": 72.3, "aa": 5.8, "swl": 6.8, "fast": 36, "swing": "Sneaky quick (36% fast) with a flat +5.8° path — geometry moved him +20 tougher. Covers soft; climb the ladder instead.", "threat": "", "threatcol": ""}], "wong": {"woba": 0.229, "k": 24}, "cheng": {"woba": 0.28, "k": 26}, "jaxfam": {"FF": {"whiff": 0.2647058823529412, "xwobacon": 0.34867269230769227, "velo": 96.09930555555555, "useR": 0.11258278145695365, "useL": 0.20257826887661143, "ivb": 17.8475, "hb": -7.7875}, "SI": {"whiff": 0.09782608695652174, "xwobacon": 0.37103048387096776, "velo": 95.51329479768788, "useR": 0.31456953642384106, "useL": 0.143646408839779, "ivb": 11.252254335260117, "hb": -16.347745664739882}, "FC": {"whiff": 0.09090909090909091, "xwobacon": 0.6606319285714287, "velo": 92.7723404255319, "useR": 0.009933774834437087, "useL": 0.08103130755064457, "ivb": 8.844255319148935, "hb": 1.3046808510638297}, "ST": {"whiff": 0.3614457831325301, "xwobacon": 0.30021336363636364, "velo": 87.8183574879227, "useR": 0.3973509933774834, "useL": 0.16022099447513813, "ivb": -0.5142028985507247, "hb": 12.341449275362319}, "CH": {"whiff": 0.38596491228070173, "xwobacon": 0.28714252459016393, "velo": 91.09123711340206, "useR": 0.11920529801324503, "useL": 0.29097605893186, "ivb": 3.874639175257731, "hb": -15.875257731958762}, "CU": {"whiff": 0.45454545454545453, "xwobacon": 0.39461538461538453, "velo": 84.99078947368422, "useR": 0.033112582781456956, "useL": 0.12154696132596685, "ivb": -14.357368421052634, "hb": 5.152105263157894}}};
+const P={"meta": {"game": "Rays @ Blue Jays · Wed Jul 22 · Rogers Centre", "pitcher": "Griffin Jax · RHP", "lineup_woba": 0.275}, "lesson": "Fenway (7 ER) wasn't a stuff problem — it was sequencing: the flat-swing bats got soft, the no-whiff bat got a sinker up. This report is the discipline.", "hitters": [{"slot": 1, "name": "Ernie Clement", "bats": "R", "woba": 0.266, "tier": "LEAN JAX", "col": "#7fd1a3", "fav": 63, "delta": -7, "kill": "2-pitch outs · zone", "attack": "0-0 sinker in the zone → sweeper away → ball in play. Two-pitch at-bats: he K's 9% — the win is efficiency, not a putaway. Don't go deep in counts.", "mx": 0.265, "bat": 64.6, "aa": 10.6, "swl": 6.9, "fast": 2, "swing": "9% K with the second-slowest bat here (64.6) — the ultimate pest. No damage in the profile; pitch counts are his only weapon.", "threat": "", "threatcol": ""}, {"slot": 2, "name": "Nathan Lukes", "bats": "L", "woba": 0.314, "tier": "EVEN", "col": "#F5D130", "fav": 37, "delta": 5, "kill": "4-seam UP · no cambio", "attack": "0-0 four-seam UP (flat swing lives low) → cutter in → sinker in play. NO changeup — he covers it (14% whiff). Pure velocity chain.", "mx": 0.314, "bat": 65.8, "aa": 5.9, "swl": 6.3, "fast": 5, "swing": "Flat +5.9° contact swing covers everything soft — geometry says velocity beats him, and his 65.8-mph bat can't punish it.", "threat": "", "threatcol": ""}, {"slot": 3, "name": "Vladimir Guerrero Jr.", "bats": "R", "woba": 0.364, "tier": "DANGER", "col": "#e0553f", "fav": 9, "delta": 13, "kill": "Edges · never behind", "attack": "BREAK YOUR PATTERN: he'll sit on your 86% sinker-or-sweeper 0-0. Open cutter or curve for a look he hasn't seen. Never fall behind — your behind-count sinker (48%) is his food. Edges only: sweeper below, cambio down-away chase. Base open, two outs? Walk him. Okamoto is the escape.", "mx": 0.383, "bat": 74.9, "aa": 1.6, "swl": 7.6, "fast": 58, "swing": "The flattest (+1.6°), fastest (74.9 mph, 58% fast) swing we've modeled — covers every shape, whiffs 14%, .383 damage. There is no geometric hole. Location, pattern-breaking, and the courage to walk him ARE the plan.", "threat": "DANGER · NO HOLE", "threatcol": "#e0553f"}, {"slot": 4, "name": "Kazuma Okamoto", "bats": "R", "woba": 0.214, "tier": "FAVORABLE", "col": "#2bb673", "fav": 92, "delta": -31, "kill": "Sweeper × 2 · hunt the K", "attack": "The escape valve — hunt the K every time. Sinker in for a called strike → sweeper away chase → sweeper AGAIN (his 7.9-ft swing can't adjust to the repeat) or cambio down. 42% whiff.", "mx": 0.293, "bat": 70.9, "aa": 14.7, "swl": 7.9, "fast": 33, "swing": "Steepest uppercut (+14.7°) and longest swing (7.9 ft) in the lineup — both validated whiff terms fire at once. Biggest geometry move we've produced (−31). Mistakes leave Rogers (33% fast), so the miss is DOWN.", "threat": "ESCAPE VALVE", "threatcol": "#2bb673"}, {"slot": 5, "name": "Daulton Varsho", "bats": "L", "woba": 0.245, "tier": "FAVORABLE", "col": "#2bb673", "fav": 75, "delta": -5, "kill": "Changeup buried", "attack": "Cutter in → changeup down under the +10.8° uppercut → repeat the cambio if he spoils it. 36% fast-swing: the changeup must be buried, never at the knees-middle.", "mx": 0.288, "bat": 72.1, "aa": 10.8, "swl": 7.6, "fast": 36, "swing": "Steep +10.8° lefty uppercut — the diving changeup is the whole at-bat. Real pull pop (36% fast) if it floats.", "threat": "", "threatcol": ""}, {"slot": 6, "name": "Alejandro Kirk", "bats": "R", "woba": 0.333, "tier": "TOUGH", "col": "#e8915a", "fav": 26, "delta": 9, "kill": "Low-away only", "attack": "No free hits: sinker at the down-away corner → sweeper away → contact on YOUR pitch. He whiffs 14% — the at-bat is about the low-away quadrant. Never middle-in at Rogers.", "mx": 0.332, "bat": 69.9, "aa": 6.8, "swl": 7.0, "fast": 20, "swing": "11% K contact machine with .332 damage — the Kirk at-bat is won before contact: low-away quadrant or nothing.", "threat": "NO-WHIFF · POP", "threatcol": "#e8915a"}, {"slot": 7, "name": "Brandon Valenzuela", "bats": "S", "woba": 0.25, "tier": "LEAN JAX", "col": "#7fd1a3", "fav": 72, "delta": -5, "kill": "Cutter → cambio → curve", "attack": "Cutter in → changeup down chase → curveball if he lays off. Standard lefty bury — 32% whiff says it works.", "mx": 0.312, "bat": 70.3, "aa": 8.3, "swl": 7.7, "fast": 21, "swing": "Switch-hitter, 32% whiff vs your mix from the left side — the standard cutter-cambio bury works.", "threat": "", "threatcol": ""}, {"slot": 8, "name": "Luis Urias", "bats": "R", "woba": 0.267, "tier": "LEAN JAX", "col": "#7fd1a3", "fav": 63, "delta": -16, "kill": "Sweeper away, expand", "attack": "Sinker ahead → sweeper away. His +11.7° uppercut misses across it — expand off the plate at two strikes.", "mx": 0.283, "bat": 67.1, "aa": 11.7, "swl": 7.4, "fast": 7, "swing": "+11.7° steep swing whiffs across the sweeper — geometry moved him 16 points easier.", "threat": "", "threatcol": ""}, {"slot": 9, "name": "Jonatan Clase", "bats": "S", "woba": 0.22, "tier": "FAVORABLE", "col": "#2bb673", "fav": 89, "delta": 17, "kill": "Zone velocity", "attack": "Zone velocity: four-seam and sinker strikes, ball in play. Flat swing but a 65-mph bat — don't waste soft stuff on a hitter who can't punish hard.", "mx": 0.257, "bat": 65.4, "aa": 3.9, "swl": 6.3, "fast": 16, "swing": "Flat but weak (65.4 mph, .257 damage) — zone him and let the defense work.", "threat": "", "threatcol": ""}], "shapes": {"FF": {"velo": 96.1, "ivb": 17.7, "hb": -7.9}, "SI": {"velo": 95.5, "ivb": 11.1, "hb": -16.4}, "FC": {"velo": 92.8, "ivb": 8.8, "hb": 1.3}, "ST": {"velo": 87.7, "ivb": -0.6, "hb": 12.6}, "CH": {"velo": 91.0, "ivb": 3.8, "hb": -15.8}, "CU": {"velo": 84.9, "ivb": -14.3, "hb": 5.1}}, "counts": {"fpR": {"SI": 39, "ST": 47, "other": 14}, "fpL": {"SI": 20, "FF": 23, "ST": 16, "CH": 16, "CU": 16, "FC": 9}, "aheadR": {"ST": 40, "CH": 21, "SI": 18, "FF": 17}, "aheadL": {"CH": 40, "FF": 19, "CU": 19, "ST": 11}, "behindR": {"SI": 48, "ST": 33, "FF": 12}, "behindL": {"FF": 27, "SI": 24, "CH": 23, "ST": 20}, "twoR": {"ST": 45, "FF": 23, "CH": 17, "SI": 10}, "twoL": {"CH": 34, "FF": 22, "ST": 14, "CU": 17, "SI": 11}}, "putaway": [["Sweeper", "45% vs R · 45% vs L", "the co-ace putaway both sides"], ["Changeup", "47% vs L · 33% vs R", "peaking: 50% whiff over the last three starts"], ["Curveball", "33% vs L", "the third-look finisher"], ["Four-seam", "29% vs L · 20% vs R", "a LOOK, not a finisher — whiff sagging 24→16%, they're timing it"], ["Sinker vs L", "0-for-8 at two strikes", "retired as a lefty putaway — never again"]], "tunnels": [["SI / CH", "run mirror", "0.6″ apart in run · 4.5 mph · 7.4″ of drop separation — same lane out of the hand, the cambio falls off the sinker's table. The righty-in / lefty-away chain."], ["FC / ST", "glove-side short & long", "11.3″ of sweep apart at 5 mph — the cutter shows the lane, the sweeper extends it. The lefty-in disruptor into the backfoot finish."], ["FF / CU", "the ladder", "32.0″ of vertical separation at 11 mph — four-seam up re-sets the eyes, curveball falls off the same window. The 3rd-time-through look."], ["ST / CH", "east-west finish", "28.4″ of horizontal split — the two putaways diverge across the plate. Alternate them and nobody covers both edges."]], "rules": ["Nothing soft to the flat swings — Vladdy, Lukes, Clase. Fenway proved it at 104 mph.", "Sinker is NEVER a two-strike pitch to lefties (0-for-8) — finish with the cambio or curve.", "Never fall behind Vladdy — your behind-count autopilot (48% sinker) is exactly what a 75-mph flat swing eats.", "Break the 0-0 righty pattern at the top — 86% sinker-or-sweeper is scoutable, and they've scouted it.", "Nothing middle-in to Vladdy or Kirk at Rogers — the corners are short and they pull.", "The sinker never leaks UP to a no-whiff bat — the Yoshida homer travels."], "rotation": {"springer": {"woba": 0.301, "note": "26% whiff — spin gets him; .329 damage says respect it"}, "gimenez": 0.27, "straw": 0.273}};
 const PC={CH:'var(--gold)',ST:'#8FBCE6',SI:'#5b9bd5',FF:'#bcd8f5',CU:'#b08bd9',FC:'#ef9a4d'};
-const fmtIP=v=>{const w=Math.floor(v),f=Math.round((v-w)*3);return f?w+'.'+f:''+w;};
 document.getElementById('meta').innerHTML=`<b>${P.meta.pitcher}</b> &nbsp;·&nbsp; ${P.meta.game} &nbsp;·&nbsp; opp lineup wOBA <b>${P.meta.lineup_woba}</b>`;
-(()=>{const f=P.form;
- document.getElementById('formbanner').innerHTML=`<span class="badge">FORM</span>
-  <span class="ln">Last 5 starts: <span class="mono" style="color:var(--sky)">${f.last5}</span></span>
-  <span class="mixnote">★ ${f.note}</span>`;})();
+document.getElementById('lessonbanner').innerHTML=`<span class="badge" style="background:var(--gold)">FENWAY LESSON</span>
+ <span class="ln" style="font-size:13px;font-family:'Archivo';font-weight:600;color:var(--hi)">${P.lesson}</span>`;
 document.getElementById('keys').innerHTML=[
- ['1','Both engines, every at-bat','First mixed lineup: <b>sinker-sweeper to the righties, cutter-changeup to the lefties</b> — the plan flips batter to batter.'],
- ['2','Circle Duran — Fenway pays him','Flattest, fastest swing here, in the doubles park. <b>Four-seam up, off the gaps, never down-middle.</b>'],
- ['3','The grinders won’t whiff','Durbin &amp; Yoshida: 13% K. <b>Zone them and take the outs in play</b> — don’t spend pitches hunting strikeouts.']
+ ['1','Win the trap in the sequence','Never give Vladdy a mistake to avoid a walk — <b>the walk is fine.</b> Okamoto behind him whiffs 42%: that’s the escape valve.'],
+ ['2','Sequences are the Fenway fix','The flagged bats got the flagged pitches. <b>Flat swings get velocity. No-whiff bats get the low-away quadrant. No exceptions.</b>'],
+ ['3','Ride the cambio, ladder the heater','Changeup is peaking (50% whiff last 3). <b>Four-seam is getting timed — it sets up, it doesn’t finish.</b>']
 ].map(([n,t,p])=>`<div class="key"><div class="n"><span>${n}</span>${t}</div><p>${p}</p></div>`).join('');
-const ARS=[['SI','Sinker'],['ST','Sweeper'],['CH','Changeup'],['FF','4-Seam'],['FC','Cutter'],['CU','Curve']];const JF=P.jaxfam;
-document.getElementById('arsenal').innerHTML=ARS.map(([f,nm])=>{const d=JF[f];
- return `<tr><td><span class="pill" style="background:${PC[f]}"></span><b style="color:var(--hi)">${nm}</b></td><td class="use">${d.velo.toFixed(1)}</td><td class="use">${Math.round(d.whiff*100)}%</td><td class="use">${Math.round(d.useR*100)}%</td><td class="use">${Math.round(d.useL*100)}%</td></tr>`;}).join('');
-function renderProj(){const d=P.proj;
- const cells=[['IP',fmtIP(d.ip_med),`${fmtIP(d.ip_p25)}–${fmtIP(d.ip_p75)} · P(6+) ${Math.round(d.ip_ge6)}%`,1],
-  ['ER',d.er_med,`avg ${d.er_mean.toFixed(1)}`,0],['K',d.k_med,`avg ${d.k_mean.toFixed(1)}`,0],
-  ['BB',d.bb_mean.toFixed(1),'expected',0],['H',d.h_mean.toFixed(1),`${d.hr_mean.toFixed(1)} HR`,0]];
- document.getElementById('statline').innerHTML=cells.map(([l,v,r,h])=>`<div class="st${h?' hero2':''}"><div class="v">${v}</div><div class="l">${l}</div><div class="r">${r}</div></div>`).join('');
- document.getElementById('eraV').textContent=d.era_med.toFixed(2);
- document.getElementById('eraNote').textContent=`mean ${d.era_mean.toFixed(2)} · contact lineup in a doubles park`;
- const chips=[[`${Math.round(d.p_qs)}%`,'g','<b>5+ IP & ≤2 ER</b>'],[`${Math.round(d.p_le1)}%`,'s','<b>≤1 earned</b>'],[`${Math.round(d.p_ge6k)}%`,'y','<b>6+ K</b>'],[`${Math.round(d.p_ge3er)}%`,'w','<b>3+ earned</b>'],[`${Math.round(d.p_blow)}%`,'b','<b>blow-up</b> (5+ ER)']];
- document.getElementById('chips').innerHTML=chips.map(([v,c,l])=>`<div class="chip"><div class="pv ${c}">${v}</div><div class="pl">${l}</div></div>`).join('');
- const draw=(id,h,labs)=>{const mx=Math.max(...h),pk=h.indexOf(mx);document.getElementById(id).innerHTML=h.map((p,i)=>`<div class="bar${i===pk?' peak':''}"><div class="bp">${p<4?'':Math.round(p)+'%'}</div><div class="col" style="height:${Math.max(2,p/mx*100)}%"></div><div class="bl">${labs[i]}</div></div>`).join('');};
- draw('erBars',d.er_hist,['0','1','2','3','4','5','6','7+']);draw('kBars',d.k_hist,['≤1','2','3','4','5','6','7','8+']);
- document.getElementById('ipnote').innerHTML=`<b>On innings:</b> the leash is a steady <b>5–6</b> (about ${Math.round(d.ip_ge6)}% for the 6th) — and it's his first start off the break in a split doubleheader, so the hook may be quicker either way. K upside is muted vs this contact group: 6+ punchouts is ${Math.round(d.p_ge6k)}%, not the coin-flip it was vs Seattle. Confirm the card when it posts.`;}
+const ARS=[['SI','Sinker'],['ST','Sweeper'],['CH','Changeup'],['FF','4-Seam'],['FC','Cutter'],['CU','Curve']];
+document.getElementById('arsenal').innerHTML=ARS.map(([f,nm])=>{const d=P.shapes[f];
+ return `<tr><td><span class="pill" style="background:${PC[f]}"></span><b style="color:var(--hi)">${nm}</b></td><td class="use">${d.velo.toFixed(1)}</td><td class="use">${d.ivb>0?'+':''}${d.ivb.toFixed(1)}</td><td class="use">${d.hb>0?'+':''}${d.hb.toFixed(1)}</td><td class="use">${{SI:'9%',ST:'38%',CH:'50%',FF:'16%',FC:'9%',CU:'43%'}[f]}</td></tr>`;}).join('');
+document.getElementById('tunnels').innerHTML=P.tunnels.map(([nm,tt,p])=>
+ `<div class="tun"><div class="tn">${nm}</div><div class="tt">${tt}</div><p>${p}</p></div>`).join('');
+const mixstr=o=>Object.entries(o).map(([k,v])=>`${k} ${v}`).join(' · ');
+document.getElementById('cflow').innerHTML=[
+ ['0-0',`<span class="rx">${mixstr(P.counts.fpR)} — <b>86% two-pitch: break it at the top</b></span>`,`<span class="rx">${mixstr(P.counts.fpL)} — five looks, keep it random</span>`],
+ ['Ahead',`<span class="rx">${mixstr(P.counts.aheadR)} — sweeper time</span>`,`<span class="rx">${mixstr(P.counts.aheadL)} — cambio time</span>`],
+ ['Behind',`<span class="rx">${mixstr(P.counts.behindR)} — <b>the danger zone: sinker autopilot is Vladdy food</b></span>`,`<span class="rx">${mixstr(P.counts.behindL)} — balanced, fine</span>`],
+ ['2 strikes',`<span class="rx">${mixstr(P.counts.twoR)}</span>`,`<span class="rx">${mixstr(P.counts.twoL)} — <b>sinker retired here (0-for-8)</b></span>`]
+].map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td></tr>`).join('');
+document.getElementById('paboard').innerHTML=P.putaway.map(([p,r,n])=>
+ `<tr><td>${p}</td><td class="pr">${r}</td><td class="pn">${n}</td></tr>`).join('');
+document.getElementById('rules').innerHTML=P.rules.map((r,i)=>
+ `<div class="v"><span class="no">✗</span> ${r}</div>`).join('');
 document.getElementById('hgrid').innerHTML=P.hitters.map(h=>{const dmgHot=h.mx>=0.33;
  const gd=h.delta>=8?`<span class="gd up">geo +${h.delta}</span>`:(h.delta<=-8?`<span class="gd dn">geo ${h.delta}</span>`:'');
  const th=h.threat?`<span class="threat" style="color:${h.threatcol}">${h.threat}</span>`:'';
@@ -241,10 +251,9 @@ document.getElementById('hgrid').innerHTML=P.hitters.map(h=>{const dmgHot=h.mx>=
   <div class="attack">${h.attack}</div>
   <div class="swingread">${h.swing}</div>
  </div>`;}).join('');
-(()=>{
- document.getElementById('ilbox').innerHTML=`<h3>Boston's IL ward — and a doubleheader Friday</h3>
-  <div class="mono" style="color:var(--mut);font-size:12px">Roman Anthony, Trevor Story &amp; Triston Casas: 60-day IL (not this series) · Marcelo Mayer: 10-day IL (possible) · Willson Contreras: suspended.</div>
-  <div class="mono" style="font-size:12.5px;color:var(--hi);line-height:1.6;margin-top:11px">Friday is a <b style="color:var(--gold)">split doubleheader</b>, so Boston will shuffle bats between games — the rotation spots are catcher (<b>Narváez ${'/'}${''} Wong</b> — Wong grades ${P.wong.woba.toFixed(3)}, ${P.wong.k}% K, same sweeper plan) and shortstop (<b>Monasterio ${'/'}${''} Cheng</b> — Cheng ${P.cheng.woba.toFixed(3)} with a 60-mph bat). Either swap keeps the read intact. <b style="color:var(--gold)">Confirm which nine you're getting before first pitch.</b></div>`;})();
+(()=>{const r=P.rotation;
+ document.getElementById('rotbox').innerHTML=`<h3>Rotation bats — confirm the card</h3>
+  <div class="mono" style="color:var(--mut);font-size:12px">Santander: 60-day IL · Barger: 10-day IL (possible) · Bichette &amp; Schneider: gone.</div>
+  <div class="mono" style="font-size:12.5px;color:var(--hi);line-height:1.6;margin-top:11px"><b style="color:var(--warn)">George Springer</b> (${r.springer.woba.toFixed(3)}) starts some days vs RHP — ${r.springer.note}. <b>Giménez</b> (${r.gimenez.toFixed(3)}) and <b>Straw</b> (${r.straw.toFixed(3)}) rotate the middle infield and outfield — both contact profiles, zone them. Any swap keeps the read intact; <b style="color:var(--gold)">the trap at 3-4 doesn't move.</b></div>`;})();
 function tab(id){document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.p===id));document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on',p.id===id));window.scrollTo(0,0);}
-renderProj();
 </script></body></html>
